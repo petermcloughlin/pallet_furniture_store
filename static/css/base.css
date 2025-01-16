@@ -3,10 +3,11 @@ html {
 }
 body {
     background: url('/media/pallets.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-size: cover;    
     height: calc(100vh - 160px);
     color: #555;
     font-family: 'Lato';
+    opacity: 0.95;
 }
 /* from Bulma */
 .icon {
@@ -19,6 +20,7 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    font-weight:bolder;
 }
 
 .main-logo-link {
@@ -26,8 +28,8 @@ body {
 }
 
 .shop-now-button {
-    background: black;
-    color: white;
+    background: orange;
+    color: black;
     min-width: 260px;
 }
 
@@ -36,18 +38,31 @@ body {
     color: white;
 }
 
-.shop-now-button:hover,
+.btn-orange {
+    background: orange;
+    color: black;
+}
+.shop-now-button:hover{
+    background-color:#b18600;
+}
+
 .shop-now-button:active,
 .shop-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: white;
+    background: #b18600;
+    color: black;
+    /* background: #222; */
+    /* color: white;     */
 }
 
 .text-black {
     color: #000 !important;
+}
+
+.text-white {
+    color: white !important;
 }
 
 .border-black {
@@ -56,7 +71,7 @@ body {
 
 /* -------------------------------- Media Queries */
 
-/* Slightly larger container on xl screens */
+/* Larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
     max-width: 80%;
