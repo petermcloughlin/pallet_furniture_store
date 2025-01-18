@@ -1,0 +1,1 @@
+web: gunicorn pallet_furniture_store.wsgi
