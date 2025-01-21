@@ -1,0 +1,418 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000001",
+      "name": "Luxury Bed Frame",
+      "description": "Luxury handmade bed frame made from refurbished pallets, pre-prepared with treated and varnished wood. This piece comes as a 9 ft x 9 ft to suit large or king size mattresses. This popluar piece comes either a pre assembled piece or as packaged four piece self assembly unit.",
+      "price": 350.00,
+      "category": 1,
+      "image_url": "",
+      "image": "hm_bed_1.jpg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000002",
+      "name": "Lightening Bed Frame",
+      "description": "The Lightening bed frame comes as pre-assembled or self-assembly pack which includes a 9 ft x 9 ft frame to suit large or king size mattresses. It also comes fitted with wired tea lights within the frame which can be plugged in. This popluar piece comes either a pre assembled piece or as packaged five piece self assembly unit.",
+      "price": 365.00,
+      "category": 1,
+      "image_url": "",
+      "image": "hm_bed_2.jpg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000003",
+      "name": "Pine Bed Frame",
+      "description": "The Pine bed frame comes as pre-assembled or self-assembly pack which includes a 8 ft x 7 ft frame to suit medium to large mattresses. This popluar piece comes either a pre assembled piece or as packaged five piece self assembly unit.",
+      "price": 325.00,
+      "category": 1,
+      "image_url": "",
+      "image": "hm_bed_3.jpg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000004",
+      "name": "Diamond Coffee Table",
+      "description": "This hand crafted coffee table comes painted with a navy, off-white, light and dark grey design. This piece comes pre-assembled and ready for immediate use, combining two refurbished stacked pallets, creating plenty of shelve space beneath its designer top with 4ft(l) x 3ft(w) x 1.5ft(h) dimension. ",
+      "price": 170.00,
+      "category": 2,
+      "image_url": "",
+      "image": "hm_coffeetable_1.jpg"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000005",
+      "name": "Mobile Coffee Table",
+      "description": "Durable mobile coffee table with wheel base for ease of movement between rooms.  This 4ft (l) x 3ft (w) x 1.5 ft (h) piece comes fully assembled or as a pre-packed self assembly with optional flat or wheel base. This durable elegant piece offers plenty of storage space for those magazines or tablets as required.",
+      "price": 250.00,
+      "category": 2,
+      "image_url": "",
+      "image": "hm_coffeetable_2.jpg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000006",
+      "name": "Stylish Coffee Table",
+      "description": "Stylish coffee table completed with a durable treatment and vanish coat, supported by four cast iron legs.  This 3.5ft (l) x 3ft (w) x 1.5 ft (h) piece comes fully assembled or as a pre-packed self assembly. This durable stylish piece offers plenty of storage space for those magazines or tablets as required.",
+      "price": 300.00,
+      "category": 2,
+      "image_url": "",
+      "image": "hm_coffeetable_3.jpg"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000007",
+      "name": "Slate Grey Coffee Table",
+      "description": "This slate grey coffee table comes completed with a durable treatment and matt slate grey coat, supported by four cast iron legs.  This 3.5ft (l) x 3.5ft (w) x 1.6 ft (h) piece comes fully assembled or as a pre-packed self assembly. This durable stylish piece offers plenty of storage space for those magazines or tablets as required and also comes with a central space for storage or display",
+      "price": 400.00,
+      "category": 2,
+      "image_url": "",
+      "image": "hm_coffeetable_4.jpg"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000008",
+      "name": "Classic Mobile Coffee Table",
+      "description": "This classic coffee table comes completed with a durable treatment and varnished coat, supported by four optional wheels at its base.  This 3.5ft (l) x 3.5ft (w) x 1.6 ft (h) piece comes fully assembled or as a pre-packed self assembly.",
+      "price": 375.00,
+      "category": 2,
+      "image_url": "",
+      "image": "hm_coffeetable_5.jpg"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000009",
+      "name": "Glass-Top Mobile Coffee Table",
+      "description": "This glass-top coffee table comes completed with a durable treatment and varnished coat, supported by four optional wheels at its base.  This 3.5ft (l) x 3.5ft (w) x 1.6 ft (h) piece comes fully assembled or as a pre-packed self assembly.",
+      "price": 385.00,
+      "category": 2,
+      "image_url": "",
+      "image": "hm_coffeetable_6.jpg"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000010",
+      "name": "Charcoal Coffee Table",
+      "description": "This charcoal coffee table comes completed with a durable treatment and charcoal matt coat, supported by a flat solid base.  This 3.5ft (l) x 3.5ft (w) x 1.6 ft (h) piece comes fully assembled or as a pre-packed self assembly, with a central storage space",
+      "price": 420.00,
+      "category": 2,
+      "image_url": "",
+      "image": "hm_coffeetable_7.jpg"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000011",
+      "name": "Rasied Coffee Table",
+      "description": "This raised coffee table comes completed with a durable treatment and varnished coat, supported by a flat solid base.  This 3.5ft (l) x 3.5ft (w) x 1.8 ft (h) piece comes fully assembled or as a pre-packed self assembly, with an optional wheelbase for ease of mobility",
+      "price": 420.00,
+      "category": 2,
+      "image_url": "",
+      "image": "hm_coffeetable_8.jpg"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000012",
+      "name": "Basic Coffee Table",
+      "description": "This basic coffee table comes completed with a durable treatment, supported by a four cast iron legs.  This 3ft (l) x 3.2ft (w) x 1.3ft (h) piece comes fully assembled or as a pre-packed self assembly.",
+      "price": 200.00,
+      "category": 2,
+      "image_url": "",
+      "image": "hm_coffeetable_9.jpg"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000013",
+      "name": "Stylish Cupboard",
+      "description": "This stylish cupboard comes completed with a durable treatment and  a varnished finish.  This 3.5ft (l) x 2.5ft (w) x 4ft (h) piece comes fully assembled or as a pre-packed self assembly.",
+      "price": 320.00,
+      "category": 3,
+      "image_url": "",
+      "image": "hm_cupboard.jpg"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000014",
+      "name": "Side Table Pack",
+      "description": "These stylish side-table pack come as a 3-pack, as seen in the photo, completed with a durable treatment and a varnished finish.  Each side table comes in the following dimensions - 2ft (l) x 2ft (w) x 1.6ft (h) and also comes fully assembled.",
+      "price": 300.00,
+      "category": 3,
+      "image_url": "",
+      "image": "hm_sidetable.jpg"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000015",
+      "name": "Handmade TV Stand",
+      "description": "This well finished TV stand comes with four in built drawers, as seen in the photo, completed with a durable treatment and a varnished finish.  It comes in the following dimensions - 5ft (l) x 2ft (w) x 1.6ft (h) and also comes fully assembled.",
+      "price": 345.00,
+      "category": 3,
+      "image_url": "",
+      "image": "hm_tvstand.jpg"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000016",
+      "name": "Handmade Wall Rack",
+      "description": "This multi-purpose wall rack comes with four iron wall hooks and nails supplied, as seen in the photo, completed with a durable treatment and a varnished finish.  It comes in the following dimensions - 3ft (l) x 3ft (w) x 2 inch(depth) and also comes fully assembled.",
+      "price": 85.00,
+      "category": 3,
+      "image_url": "",
+      "image": "hm_wall_rack.jpg"
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000017",
+      "name": "Sea Salt Garden Bench",
+      "description": "This Sea Salt garden bench comes with built-in automatic lighting, as seen in the photo, completed with a durable treatment and a matt finish, inclusive of cushions and uplhostery, as seen in the photo.  It comes in the following dimensions - 12ft (l) x 4ft (w) x 4ft (h) and also comes as a simple self assembly pack.",
+      "price": 650.00,
+      "category": 5,
+      "image_url": "",
+      "image": "gd_bench_1.jpg"
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000018",
+      "name": "Classic Garden Bench",
+      "description": "This Classic garden bench built with six refurbished pallets, as seen in the photo, completed with a durable treatment and a varnished finish, inclusive of cushions and uplhostery, as seen in the photo.  It comes in the following dimensions - 8ft (l) x 8ft (w) x 3.5ft (h) and also comes as a simple self assembly pack.",
+      "price": 500.00,
+      "category": 5,
+      "image_url": "",
+      "image": "gd_bench_2.jpg"
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000019",
+      "name": "Light Grey Garden Bench",
+      "description": "This Light Grey garden bench built with six refurbished pallets, as seen in the photo, completed with a durable treatment and a matt light grey finish, inclusive of cushions and uplhostery, as seen in the photo.  It comes in the following dimensions - 6ft (l) x 6ft (w) x 3.5ft (h) and also comes as a simple self assembly pack.",
+      "price": 525.00,
+      "category": 5,
+      "image_url": "",
+      "image": "gd_bench_3.jpg"
+    }
+  },
+  {
+    "pk": 20,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000020",
+      "name": "Rainbow Garden Rack",
+      "description": "This Rainbow garden rack comes treated, painted and assembled with metal holders to support potplants or other storage use. This piece comes with everything assembled and ready for immediate use in your garden.",
+      "price": 75.00,
+      "category": 5,
+      "image_url": "",
+      "image": "gd_rack_1.jpg"
+    }
+  },
+  {
+    "pk": 21,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000021",
+      "name": "Classic Garden Rack",
+      "description": "This Classic garden rack comes treated, varnished and assembled with plastic containers to support potplants or other storage use. This piece comes with everything assembled and ready for immediate use in your garden.",
+      "price": 75.00,
+      "category": 5,
+      "image_url": "",
+      "image": "gd_rack_2.jpg"
+    }
+  },
+  {
+    "pk": 22,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000022",
+      "name": "Dark Charcoal Garden Rack",
+      "description": "This Dark charcoal garden rack comes treated, painted and assembled with plastic containers to support potplants or other storage use. This piece comes with everything assembled and ready for immediate use in your garden.",
+      "price": 80.00,
+      "category": 5,
+      "image_url": "",
+      "image": "gd_rack_3.jpg"
+    }
+  },
+  {
+    "pk": 23,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000023",
+      "name": "Classic Garden Rack",
+      "description": "This classic garden rack comes treated, varnished and assembled to support potplants or other storage/display. This piece comes with everything assembled and ready for immediate use in your garden.",
+      "price": 125.00,
+      "category": 5,
+      "image_url": "",
+      "image": "gd_rack_4.jpg"
+    }
+  },
+  {
+    "pk": 24,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000024",
+      "name": "Garden Refreshments Table ",
+      "description": "This stylish garden refreshments table comes treated, varnished and assembled with an in-built ice bucket to contain refreshments during those warmer days. This piece comes with everything assembled and ready for immediate use in your garden.",
+      "price": 325.00,
+      "category": 4,
+      "image_url": "",
+      "image": "gd_table_1.jpg"
+    }
+  },
+  {
+    "pk": 25,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000025",
+      "name": "White Garden Table ",
+      "description": "This stylish white garden table comes treated, painted, varnished and assembled with storage space under the surface. This piece comes assembled and ready for immediate use in your garden.",
+      "price": 225.00,
+      "category": 4,
+      "image_url": "",
+      "image": "gd_table_2.jpg"
+    }
+  },
+  {
+    "pk": 26,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000026",
+      "name": "Classic Garden Table and Chairs ",
+      "description": "This stylish piece garden table comes treated,  varnished and assembled with three  arm chairs and one small table, all built from refurbished pallets. This piece comes assembled and ready for immediate use in your garden.Note: it excludes the cushions and upholstery.",
+      "price": 385.00,
+      "category": 4,
+      "image_url": "",
+      "image": "gd_tablechairs_1.jpg"
+    }
+  },
+  {
+    "pk": 27,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000027",
+      "name": "Stylish Garden Table and Chairs ",
+      "description": "This stylish garden table and chairs comes treated,  varnished with two bench chairs and three small tables, all built from refurbished pallets. This piece comes as a simple self-assembly unit. The overall dmiensions of the assemby are 7ft (l) x 7ft (w) x 7ft (h) (including the triangluar bench backing board ).Note: it excludes the cushions and upholstery.",
+      "price": 545.00,
+      "category": 4,
+      "image_url": "",
+      "image": "gd_tablechairs_4.jpg"
+    }
+  },
+  {
+    "pk": 28,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000028",
+      "name": "Cylindrical Garden Table and Chairs ",
+      "description": "This stylish garden table and chairs comes treated,  varnished with a cylindrical bench chairs and bench back board, all built from refurbished pallets. This piece comes as a simple self-assembly unit. The overall dmiensions of the assemby are 12ft (radius) x 6 ft (h) (including the circular bench backing board ).Note: it includes the cushions and upholstery.",
+      "price": 750.00,
+      "category": 4,
+      "image_url": "",
+      "image": "gd_tablechairs_5.jpg"
+    }
+  },
+  {
+    "pk": 29,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000029",
+      "name": "Classic White Garden Side Table and Chairs",
+      "description": "This stylish garden side-table and chairs comes treated and varnished with a matt off-white finish, all built from refurbished pallets. This piece comes as a simple self-assembly unit. Two arm chairs 5ft (l) x 2.5ft (w) x 3.5ft(h) each and two side tables 2ft (l) x 2ft (w) x 2ft (h) each. Note: it includes the cushions and upholstery.",
+      "price": 500.00,
+      "category": 4,
+      "image_url": "",
+      "image": "gd_tablechairs_6.jpg"
+    }
+  },
+  {
+    "pk": 30,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000030",
+      "name": "Painted Garden Table Stand",
+      "description": "This stylish garden Table Stand comes treated and varnished with a matt grey and blue mixed finish, all built from refurbished pallets. This piece comes as a simple self-assembly unit. Dimensions 4ft (l) x 4ft (w) x 6ft (h).",
+      "price": 140.00,
+      "category": 6,
+      "image_url": "",
+      "image": "gd_tablestand_1.jpg"
+    }
+  },
+  {
+    "pk": 31,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000031",
+      "name": "Classic Garden Table Stand",
+      "description": "This classic garden table stand comes treated and varnished with a dureable finish, all built from refurbished pallets. This piece comes as a simple self-assembly unit. Dimensions 4ft (l) x 2ft (w) x 6ft (h).",
+      "price": 145.00,
+      "category": 6,
+      "image_url": "",
+      "image": "gd_tablestand_2.jpg"
+    }
+  },
+  {
+    "pk": 32,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1000000032",
+      "name": "Classic Garden Table Stand",
+      "description": "This stylish classic garden table stand comes treated and varnished with a dureable mahogany top finish, all built from refurbished pallets. This piece comes as a fully assembled unit with a water cooler space in the centre for those summer refreshments. Dimensions 4ft (l) x 3ft (w) x 4ft (h).",
+      "price": 195.00,
+      "category": 6,
+      "image_url": "",
+      "image": "gd_tablestand_3.jpg"
+    }
+  }
+]
