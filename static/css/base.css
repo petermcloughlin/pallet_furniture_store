@@ -6,8 +6,7 @@ body {
     background-size: cover;    
     height: calc(100vh - 160px);
     color: #555;
-    font-family: 'Lato';
-    opacity: 0.95;
+    font-family: 'Lato';    
 }
 /* from Bulma */
 .icon {
@@ -52,9 +51,7 @@ body {
 .btn-black:active,
 .btn-black:focus {
     background: #b18600;
-    color: black;
-    /* background: #222; */
-    /* color: white;     */
+    color: black;    
 }
 
 .text-black {
@@ -72,12 +69,11 @@ body {
 .overlay {
     width: 100%;
     height: 100%;
-    left: 0;
     top: 0;
+    left: 0;    
     position: fixed;
-    background: #b18600;
+    background: white;
     z-index: -1;
-
 }
 /* -------------------------------- Media Queries */
 
