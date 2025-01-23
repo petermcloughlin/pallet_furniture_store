@@ -1,12 +1,12 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Product
+from .models import StoreProduct
 
 # Create your views here.
 
 def all_products(request):
     ''' A view to display all products '''
 
-    products = Product.objects.all()
+    products = StoreProduct.objects.all()
 
     context = {
         'products': products,
@@ -15,10 +15,10 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
-def product_detail(request, product_id):
+def product_detail(request, storeproduct_id):
     ''' A view to display a single products details '''
 
-    product = get_object_or_404(Product, pk=product_id)
+    product = get_object_or_404(StoreProduct, pk=storeproduct_id)
 
     context = {
         'product': product,
