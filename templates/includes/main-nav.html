@@ -16,10 +16,10 @@
                 Homeware
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="home-furniture-link">
-                <a href="" class="dropdown-item">Beds</a>
-                <a href="" class="dropdown-item">Coffee Tables</a>
-                <a href="" class="dropdown-item">Other</a>
-                <a href="" class="dropdown-item">All Homeware</a>
+                <a href="{% url 'products' %}?category=beds" class="dropdown-item">Beds</a>
+                <a href="{% url 'products' %}?category=coffee_tables" class="dropdown-item">Coffee Tables</a>
+                <a href="{% url 'products' %}?category=other" class="dropdown-item">Other</a>
+                <a href="{% url 'products' %}?category=beds,coffee_tables,other" class="dropdown-item">All Homeware</a>
             </div>
         </li>
 
@@ -28,10 +28,10 @@
                 Gardenware
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="garden-furnture-link">
-                <a href="" class="dropdown-item">Tables & Chairs</a>
-                <a href="" class="dropdown-item">Benches & Racks</a>
-                <a href="" class="dropdown-item">Stands</a>
-                <a href="" class="dropdown-item">All Gardenware</a>
+                <a href="{% url 'products' %}?category=tables_chairs" class="dropdown-item">Tables & Chairs</a>
+                <a href="{% url 'products' %}?category=benches_racks" class="dropdown-item">Benches & Racks</a>
+                <a href="{% url 'products' %}?category=stands" class="dropdown-item">Stands</a>
+                <a href="{% url 'products' %}?category=tables_chairs,benches_racks,stands" class="dropdown-item">All Gardenware</a>
             </div>
         </li>
 
