@@ -11,14 +11,15 @@
 {% endblock %}
     
 {% block content %}
-    <div class="overlay"></div>
+    <div class="overlay">       
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Our Latest Collection</h2>
                 {% for c in current_categories %}
-                    <a href="{% url 'products' %}?category={{ c.name }}">
-                        <span class="p-2 mt-2 badge badge-yellow rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                    <a href="{% url 'products' %}?category={{ c.name }}" class="text-decoration-none cat-badge">
+                        <span class="p-2 mt-2 badge text-dark rounded-4 border border-warning">{{ c.friendly_name }}</span>
                     </a>
                 {% endfor %}
                 <hr class="w-50 mb-1">
@@ -26,7 +27,15 @@
         </div>
         <div class="row">
             <div class="products-container col-10 offset-1">
-                <div class="row mb-2 mt-1">                
+                <div class="row mb-2 mt-1">
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            {% if search_term or current_categories or current_sorting != 'None_None' %}
+                                <span><a href="{% url 'products' %}">Home</a> | </span>
+                            {% endif %}
+                            {{ products|length }} products found
+                        </p>
+                    </div>                
                 </div>
                 <div class="row">
                     {% for product in products %}                                                        
@@ -39,7 +48,7 @@
                                 <h5 class="card-text">{{ product.name }}</h4>
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
-                                        <a class="text-muted" href="{% url 'products' %}?category={{ produc.category.name }}">
+                                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
                                             <i id="prodcat-icon" class="fa-solid fa-tag"></i>
                                             {{ product.category.friendly_name }}
                                         </a>
