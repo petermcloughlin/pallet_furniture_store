@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)k2)kzf^r1qkl*z)u-(un&9()sbe5l6pqrd4g^759ox^vg^c^('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-petermcloug-palletfurni-wq11pwi1xbd.ws.codeinstitute-ide.net','.herokuapp.com']
 
@@ -75,6 +75,7 @@ TEMPLATES = [
                 'django.template.context_processors.request', 
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'bag.contexts.bag_contents'
             ],
         },
     },
