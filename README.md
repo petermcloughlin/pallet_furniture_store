@@ -6,7 +6,7 @@ This is an online furniture which sells bespoke, handmade furntiure from refurbi
 
 You can access the deployed site [here](https://django-pallet-furniture-a8821c2711e7.herokuapp.com/)
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+Successfully migrated from GitPod to VS code!
 
 ## Gitpod Reminders
 
