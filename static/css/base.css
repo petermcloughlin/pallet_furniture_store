@@ -41,6 +41,20 @@ body {
     background: orange;
     color: black;
 }
+.btn-outline-orange {
+    background: #b18600;
+    color: #000 !important;
+    border: solid 1px #b18600;
+}
+
+.btn-outline-orange:hover,
+.btn-outline-orange:active,
+.btn-outline-orange:focus {
+    background: white;
+    color: #b18600 !important;
+    border: solid 1px #b18600;
+}
+
 .shop-now-button:hover{
     background-color:#b18600;
 }
