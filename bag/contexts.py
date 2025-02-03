@@ -19,8 +19,10 @@ def bag_contents(request):
             'quantity': quantity,
             'product': product,
         })
-
-    grand_total = total
+    if product_count > 0:
+        grand_total = total + delivery
+    else:
+        grand_total = total    
 
     context = {
         'bag_items': bag_items,

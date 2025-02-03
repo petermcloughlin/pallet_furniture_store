@@ -101,6 +101,10 @@ a.cat-badge > span.badge:hover {
     background: #b18600 !important;
     color: white !important;
 }
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
 /* -------------------------------- Media Queries */
 
 /* Larger container on xl screens */
