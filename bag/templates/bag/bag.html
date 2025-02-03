@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -32,7 +33,7 @@
                                     <th scope="col"></th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
+                                    <!-- <th scope="col">Subtotal</th> -->
                                 </tr>
                             </thead>
 
@@ -49,7 +50,7 @@
                                         <p class="my-0">€{{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <form class="form update-form" method="POST" action=""> 
+                                        <form class="form update-form" method="POST" action="{% url 'amend_bag' item.item_id %}"> 
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group">
@@ -61,11 +62,11 @@
                                             </div>
                                         </form> 
                                         <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
+                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_quantity="{{ item.quantity }}"><small>Remove</small></a>
                                     </td>
-                                    <td class="py-3">
-                                        <p class="my-0">€{{ item.product.price }}</p>
-                                    </td>                                    
+                                    <!-- <td class="py-3">
+                                        <p class="my-0" >€{{ item.product.price }}</p>
+                                    </td>                                     -->
                                 </tr>                                                                
                             {% endfor %}
                             <tr>
@@ -119,9 +120,10 @@
     // Remove item and reload on click
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];       
-        var url = `/bag/remove/${itemId}`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
+        var itemId = $(this).attr('id').split('remove_')[1];  
+        var prod_quantity = $(this).data('product_quantity')     
+        var url = `/bag/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'quantity': prod_quantity};
 
         $.post(url, data)
          .done(function() {
