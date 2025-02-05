@@ -27,7 +27,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
-                <p class="text-muted">Order Summary</p>
+                <p class="text-muted">Order Summary</p>                
                 <div class="row">
                     <div class="col-7 offset-2">
                         <p class="mb-1 mt-0 small text-muted">Item</p>
@@ -37,6 +37,7 @@
                     </div>
                 </div>
                 {% for item in bag_items %}
+                <div class="row">
                     <div class="col-2 mb-1">
                         <a href="{% url 'product_detail' item.product.id %}">
                             {% if item.product.image %}
@@ -53,6 +54,7 @@
                     <div class="col-3 text-right">
                         <p class="my-0 small text-muted">€{{ item.product.price }}</p>
                     </div>
+                </div>
                 {% endfor %}
                 <hr class="my-0">
                 <div class="row text-black text-right">
@@ -129,4 +131,11 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
