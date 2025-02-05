@@ -35,7 +35,7 @@ class CustomerOrder(models.Model):
         if it hasn't been set already.
         """
         if not self.order_number:
-            self.order_number = self._generate_order_number()
+            self.order_number = self._generate_custorder_num()
         super().save(*args, **kwargs)
 
     def update_total(self):
@@ -43,7 +43,7 @@ class CustomerOrder(models.Model):
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']        
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0       
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
 
