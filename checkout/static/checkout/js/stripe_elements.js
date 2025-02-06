@@ -57,7 +57,7 @@ form.addEventListener('submit', function(ev){
     $('#loading-overlay').fadeToggle(100);
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
-            card: card,            
+            card: card,                                
         }
     }).then(function(result){
         if(result.error){
