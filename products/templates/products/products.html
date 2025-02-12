@@ -52,7 +52,7 @@
                                 </a>
                                 {% endif %}                                                         
                                
-                                <h5 class="card-text">{{ product.name }}</h4>
+                                <h5 class="card-text">{{ product.name }}</h5>
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -61,7 +61,16 @@
                                         </a>
                                     </p>
                                     {% endif %}
-                                <h6>€{{ product.price }}</h5>
+                                <h6>
+                                    €{{ product.price }}
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-2">
+                                        <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                    </small>
+                                    {% endif %}
+                                </h6>
+                                
                             </div>
                           </div>                          
                         </div>                       
