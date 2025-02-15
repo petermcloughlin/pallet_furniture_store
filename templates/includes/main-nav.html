@@ -34,13 +34,18 @@
                 <a href="{% url 'products' %}?category=tables_chairs,benches_racks,stands" class="dropdown-item">All Gardenware</a>
             </div>
         </li>
-
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Requests
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="about" aria-haspopup="true">
+                About Us
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Bespoke Requests
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">                              
-                <a href="" class="dropdown-item">Submit your Request</a>
+                <a href="#" class="dropdown-item">Submit your Bespoke Request</a>
+                <a href="{% url 'faq' %}" class="dropdown-item">FAQ's</a>
             </div>
         </li>
     </ul>
