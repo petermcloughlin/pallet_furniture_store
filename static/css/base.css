@@ -213,6 +213,12 @@ a.cat-badge > span.badge:hover {
     border-color: #dc3545;
     border-radius: 0;
 }
+/* FAQ */
+#accordionExample {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
