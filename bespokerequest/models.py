@@ -2,8 +2,8 @@ from django.db import models
 
 
 class BespokeRequest(models.Model):
-    name = models.CharField(max_length=254)
-    telephonenumber = models.CharField(max_length=20, null=True, blank=True)
+    name = models.CharField(max_length=254, verbose_name='Full Name')
+    telephonenumber = models.CharField(max_length=20, null=True, blank=True, verbose_name='Contact Number')
     email = models.EmailField()
     message = models.TextField()
 
