@@ -12,18 +12,42 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-6">
-                <h2 class="logo-font mb-4">Welcome to the Pallet Furniture Store</h2>
-                <p class="mb-4">Information about us....</p>             
-            </div>            
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <img class="card-img-top" src="{{ MEDIA_URL }}woodworker.jpg" alt="wood worker image">
-            </div>
-        </div>
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div class="card shadow-lg p-2 mb-5 bg-body rounded-4 text-center">
+                    <h2 class="logo-font mb-4 mt-4">Who Are We?</h2>
+                    <p class="mb-4">The Pallet Furniture Store is an established woodworking business, 
+                        that specialises in the design, build and delivery of high quality furnishings. 
+                        We have a team of woodwork specialists who design and deliver a high level 
+                        of quality of both home and garden furniture pieces to suit your taste.</p> 
+                </div> 
+                <div class="card shadow-lg p-2 mb-5 bg-body rounded-4 text-center">
+                    <h2 class="logo-font mb-4 mt-4">What do We Do?</h2>
+                    <p class="mb-4">Here at the Pallet Furniture Store, we liase with a number of 
+                        builder providers and construction companies, nationwide to collect, 
+                        refurbish and re-cycle both, used and un-used pallets to produce bespoke 
+                        furniture pieces, that are built to a high standard, while protecting 
+                        the environment from unwanted waste.</p> 
+                </div> 
+                <div class="card shadow-lg p-2 mb-5 bg-body rounded-4 text-center">
+                    <p>To view our latest range of pieces, visit our online store 
+                        <span>
+                            <a href="{% url 'products' %}" class="btn btn-sm btn-outline-orange rounded-4">
+                                here
+                            </a>
+                        </span>
+                    </p>
+                </div>                            
+            </div>                       
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card shadow-lg p-2 mb-5 bg-body rounded-4">
+                    <div class="image-container">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}woodworker.jpg" alt="wood worker image">
+                    </div>
+                </div>     
+            </div>       
+        </div>       
     </div>
 {% endblock %}
 
