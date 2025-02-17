@@ -8,6 +8,9 @@ body {
     color: #555;
     font-family: 'Lato';    
 }
+.header-nav-background{
+    background: #E2AE3F;
+}
 /* from Bulma */
 .icon {
     align-items: center;
@@ -38,7 +41,7 @@ body {
 }
 
 .btn-orange {
-    background: orange;
+    background: #b18600;
     color: black;
 }
 .btn-outline-orange {
@@ -218,7 +221,47 @@ a.cat-badge > span.badge:hover {
     margin-bottom: 20px;
     padding-bottom: 20px;
 }
+/* ----------------------------------------------------------Footer */
+footer {
+    background-color: #E2AE3F !important;
+}
 
+.footer-content {    
+    color: #000 !important;
+}
+
+.footer-content > ul {
+    padding-top: 20px;
+}
+
+.footer-content ul li {
+    list-style-type: none;
+}
+
+.footer-content ul li h5 {
+    color: #000;
+}
+
+.footer span {
+    color: #000 !important;
+}
+
+#map {
+    margin-top: 10px;
+    padding-top: 20px;
+    height: 210px; 
+    width: auto;
+}
+
+.social-links li ~ li {
+    padding-left: 6px;
+}
+.social-links li a i{
+    color: #000 !important;
+}
+.social-links li a i:hover{
+    color: #fafafa !important;
+}
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
