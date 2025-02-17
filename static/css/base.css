@@ -221,6 +221,13 @@ a.cat-badge > span.badge:hover {
     margin-bottom: 20px;
     padding-bottom: 20px;
 }
+.accordian-bg-gold {
+    background: #D5CBB6 !important;
+}
+.content-black {
+    color:#000 !important;    
+    font-size: 1.2rem;
+}
 /* ----------------------------------------------------------Footer */
 footer {
     background-color: #E2AE3F !important;
