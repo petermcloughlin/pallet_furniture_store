@@ -31,4 +31,5 @@ urlpatterns = [
     path('about/', include('about.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-
+handler404 = 'pallet_furniture_store.views.error_404_view'
+handler500 = 'pallet_furniture_store.views.error_500_view'
