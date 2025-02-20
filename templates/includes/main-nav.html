@@ -53,5 +53,12 @@
                 <a href="{% url 'faq' %}" class="dropdown-item">FAQ's</a>
             </div>
         </li>
+        {% if request.user.is_authenticated %}
+            <li class="nav-item dropdown">
+                <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'review' %}" id="review" aria-haspopup="true">
+                    Leave a Review
+                </a>
+            </li>
+        {% endif %}
     </ul>
 </div>

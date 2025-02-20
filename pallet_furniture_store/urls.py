@@ -29,6 +29,7 @@ urlpatterns = [
     path('faq/', include('faq.urls')),
     path('bespokerequest/', include('bespokerequest.urls')),
     path('about/', include('about.urls')),
+    path('servicereview/', include('servicereview.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'pallet_furniture_store.views.error_404_view'

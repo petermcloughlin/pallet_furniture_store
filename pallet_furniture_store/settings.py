@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'faq',
     'bespokerequest',
     'about',
+    'servicereview',
     'crispy_forms',
 ]
 

@@ -1,7 +1,7 @@
 html {
-    height: 100%;
+    height: 100%;   
 }
-body {
+body {   
     background: url('https://res.cloudinary.com/dumkr6a3v/image/upload/v1739893796/pallets_yzijjh.jpg') no-repeat center center fixed;
     background-size: cover;    
     height: calc(100vh - 160px);
@@ -230,7 +230,7 @@ a.cat-badge > span.badge:hover {
 }
 /* ----------------------------------------------------------Footer */
 footer {
-    background-color: #E2AE3F !important;
+    background-color: #E2AE3F !important;    
 }
 
 .footer-content {    
