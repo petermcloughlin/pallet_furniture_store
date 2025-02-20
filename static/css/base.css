@@ -11,6 +11,9 @@ body {
 .header-nav-background{
     background: #E2AE3F;
 }
+.nav-link:hover {
+    color: #fff !important;
+}
 /* from Bulma */
 .icon {
     align-items: center;
