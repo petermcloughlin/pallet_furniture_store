@@ -7,7 +7,7 @@ def bespokerequest_view(request):
     ''' View for Bespoke request form '''
     template = "bespokerequest/bespokerequest.html"
     form = BespokeRequestForm()
-    
+
     if request.method == "POST":
         form = BespokeRequestForm(request.POST)
         if form.is_valid():
@@ -22,6 +22,6 @@ def bespokerequest_view(request):
                             contact number and email address.')
 
     context = {
-        'form': form,     
+        'form': form,
     }
     return render(request, template, context)

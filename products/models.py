@@ -1,11 +1,11 @@
 from django.db import models
 
-# Create your models here.
+
 class ProductCategory(models.Model):
 
     class Meta:
         verbose_name_plural = 'Product Categories'
-        
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -17,7 +17,9 @@ class ProductCategory(models.Model):
 
 
 class StoreProduct(models.Model):
-    category = models.ForeignKey('ProductCategory', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('ProductCategory',
+                                 null=True, blank=True,
+                                 on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
