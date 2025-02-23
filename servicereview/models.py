@@ -8,4 +8,5 @@ class ServiceReview(models.Model):
     review = models.TextField()
 
     def __str__(self):
-        return f"Service review from {self.name} | Email: {self.email} | Review: {self.review}"
+        return (f"Service review from {self.name} |" +
+                f"Email: {self.email} | Review: {self.review}")

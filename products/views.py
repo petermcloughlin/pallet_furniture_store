@@ -6,7 +6,6 @@ from django.db.models.functions import Lower
 from .models import StoreProduct, ProductCategory
 from .forms import ProductForm
 
-# Create your views here.
 
 def all_products(request):
     ''' A view to display all products '''
@@ -29,7 +28,11 @@ def all_products(request):
                 messages.error(request, 'You must enter a search criteria.')
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(
+                        name__icontains=query
+                        ) | Q(
+                        description__icontains=query
+                        )
             products = products.filter(queries)
 
         if 'sort' in request.GET:
@@ -74,11 +77,11 @@ def product_detail(request, storeproduct_id):
 
 @login_required
 def add_product(request):
-    """ Add a product to the store - for admin user""" 
+    """ Add a product to the store - for admin user"""
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-    
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -86,10 +89,13 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add product. ' +
+                'Please ensure the form is valid.')
     else:
         form = ProductForm()
-            
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -104,7 +110,7 @@ def edit_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-    
+
     product = get_object_or_404(StoreProduct, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -113,7 +119,9 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update product. Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -133,7 +141,7 @@ def delete_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-    
+
     product = get_object_or_404(StoreProduct, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')

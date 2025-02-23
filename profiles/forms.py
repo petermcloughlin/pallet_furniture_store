@@ -13,8 +13,8 @@ class UserProfileForm(forms.ModelForm):
         labels and set autofocus on fullname field to prompt user input
         """
         super().__init__(*args, **kwargs)
-        placeholders = {            
-            'default_phone_number': 'Phone Number',            
+        placeholders = {
+            'default_phone_number': 'Phone Number',
             'default_postcode': 'Postal Code',
             'default_town_or_city': 'Town or City',
             'default_street_address1': 'Street Address 1',
@@ -30,5 +30,6 @@ class UserProfileForm(forms.ModelForm):
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-warning rounded-4 profile-form-input'
+            self.fields[field].widget.attrs['class'] = (
+                'border-warning rounded-4 profile-form-input')
             self.fields[field].label = False

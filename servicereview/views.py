@@ -22,6 +22,6 @@ def review(request):
                             email address and a your review.')
 
     context = {
-        'form': form,     
+        'form': form,
     }
     return render(request, template, context)
