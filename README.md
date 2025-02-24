@@ -1,8 +1,10 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# THE PALLET FURNITURE STORE
+
+![Am-I-Responsive](/documentation/validations/am-i-responsive/am-i-responsive.PNG)
 
 Welcome to the Pallet Furniture Store,
 
-This is an online furniture which sells bespoke, handmade furntiure from refurbished used pallets.
+This is an online furniture which builds, assembles and sells bespoke, handmade furntiure from refurbished used pallets.
 
 You can access the deployed site [here](https://django-pallet-furniture-a8821c2711e7.herokuapp.com/)
 
