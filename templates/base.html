@@ -29,7 +29,7 @@
         crossorigin=""> 
         <!-- Mail Chimp -->
         <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-        <style type="text/css">
+        <style>
            #mc_embed_signup{
             background:rgba(0,0,0,0.1); 
             color: #000;
@@ -263,7 +263,7 @@
     
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
       $('.toast').toast('show');
     </script>
     <script>       
@@ -277,9 +277,9 @@
       }).addTo(map);        
     </script>
     <!-- Mail Chimp -->
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js">                    
+    <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js">                    
     </script>
-    <script type="text/javascript">
+    <script>
       (function($) {
         window.fnames = new Array(); 
         window.ftypes = new Array();
