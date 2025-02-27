@@ -1,135 +1,155 @@
-# THE PALLET FURNITURE STORE
+# PALLET-FURNITURE-STORE
 
 ![Am-I-Responsive](/documentation/validations/am-i-responsive/am-i-responsive.PNG)
 
+## Introduction
 Welcome to the Pallet Furniture Store,
 
-This is an online furniture which builds, assembles and sells bespoke, handmade furntiure from refurbished used pallets.
+This is an online furniture store which builds, assembles and sells bespoke, han-dmade furntiure from refurbished, used and un-used pallets. This is a business set up with both the customer and the environment in mind. At the Pallet Furniture Store, our dedicated team have partnered up with a number of building contractors and small businesses, nationwide to ensure a policy of reduced waste and increased recycling continues, whilst supporting our team members as they provide a continuous range of bespoke fuurniture pieces, for both home and gardens, all made from refurbished, used and unused pallets.
 
 You can access the deployed site [here](https://django-pallet-furniture-a8821c2711e7.herokuapp.com/)
 
-Successfully migrated from GitPod to VS code!
+The site allows visitors to browse our latest range of products currently in stock at our storage base in Cork. The site visitor is also welcome to register with us as a customer, from which they can create their own profile and make purchases using our secure online checkout facility which uses Stripe's payment gateway.
 
-## Gitpod Reminders
+If you wish to make a test purchase, you can use the following [Stripe Dummy Card](https://stripe.com/docs/testing) details:
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- Success Card Number: 4242 4242 4242 4242
+- Expiry: 04/25
+- CVC: 242
+- ZIP: 42424
 
-`python3 -m http.server`
+Any payments made using a valid debit/credit card will not be processed and the card will not be charged. No orders made will be fulfilled.
 
-A blue button should appear to click: _Make Public_,
+For full Admin access to Django Admin panel with relevant sign-in credentials: [Pallet Furniture Store Admin](https://django-pallet-furniture-a8821c2711e7.herokuapp.com/admin/)
 
-Another blue button should appear to click: _Open Browser_.
+## Table of Contents
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+- [Pallet Furniture Store](#pallet-furniture-store)
+  - [Introduction](#introduction)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Customer Goals](#customer-goals)
+  - [Business Goals](#business-goals)
+- [UX/UI - User Experience/User Interface](#uxui---user-experienceuser-interface)
+  - [Design Inspiration](#design-inspiration)
+    - [Color Scheme](#color-scheme)   
+- [Project Planning](#project-planning)
+  - [Strategy Plane](#strategy-plane)
+    - [Site Goals](#site-goals)
+  - [Agile Methodologies](#agile-methodologies)
+    - [MoSCoW Prioritization](#moscow-prioritization)
+    - [Sprints](#sprints)
+  - [Marketing](#marketing)
+  - [User Stories](#user-stories)
+    - [Visitor User Stories](#visitor-user-stories)
+    - [Epic - Home View \& User Account](#epic---home-view--user-account)
+    - [Epic - Products](#epic---products)
+    - [Epic - Basket Management \& Purchasing](#epic---basket-management--purchasing)
+    - [Epic - Wishlist](#epic---wishlist)
+    - [Epic - Newsletter](#epic---newsletter)
+  - [Scope Plane](#scope-plane)
+  - [Structural Plane](#structural-plane)
+  - [Skeleton \& Surface Planes](#skeleton--surface-planes)
+    - [Wireframes](#wireframes)
+    - [Database Schema](#database-schema)
+    - [Defensive Design](#defensive-design)
+- [Features](#features)
+  - [User View - Guests/Account Holders](#user-view---guestsaccount-holders)
+  - [CRUD Functionality](#crud-functionality)
+  - [Features Showcase](#features-showcase)
+  - [Future Features](#future-features)
+- [Technologies \& Languages Used](#technologies--languages-used)
+  - [Libraries \& Frameworks](#libraries--frameworks)
+  - [Tools \& Programs](#tools--programs)
+- [Testing](#testing)
+- [Deployment](#deployment)
+  - [Connecting to GitHub](#connecting-to-github)
+  - [Django Project SetUp](#django-project-setup)
+    - [Elephant SQL](#elephant-sql)
+  - [Heroku Deployment](#heroku-deployment)
+  - [Google Mail Setup](#google-mail-setup)
+  - [AWS Config](#aws-config)
+    - [Media Folder Setup](#media-folder-setup)
+    - [Django AWS Connect](#django-aws-connect)
+  - [Stripe Config](#stripe-config)
+- [Credits](#credits)
+  - [Code](#code)
+  - [Media](#media)
+  - [Acknowledgements](#acknowledgements)
 
-A blue button should appear to click: _Make Public_,
+## Overview
+Pallet Furniture Store is an eco-friendly furniture store focusing on procuring the best in sustainable, long-life products. Users are invited to:
 
-Another blue button should appear to click: _Open Browser_.
+- View the store as Guests
+- Register for an Account
+- Submit bespoke requests to our team
+- Browse products by category and price
+- View, add and edit products in their bag
+- As registered users, view past orders through their profile page
+- Submit reviews letting us know their thoughts about our service
+- Suscribe to our mailing list using mailchimp's facility in the site's footer
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Pallet Furniture Store is accessible via all browsers with full responsiveness on different screen sizes. Its aim is to provide eye-catching , bespoke home and garden furnishings, whilst reducing waste nationally.
 
-To log into the Heroku toolbelt CLI:
+## Customer Goals
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Customers are provided with an easy, intuitive shopping experience and are encouraged to avail of sustainable, eco-friendly home and garden furniture. It is hoped that customers will sign up/register an account with the Pallet Furniture Store and make purchases and send us their thoughts via our Service Review option. A sense of community is created with a mailing list subscription, which will inform the customers of new products, trends and articles related to the Pallet Furniture Store.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+## Business Goals
 
-### Connecting your Mongo database
+Pallet Furniture Store provides easy Admin functionality for the business owner with an accessible, easy-use Admin Dashboard to manage the product details and information in our store. The additional frontend forms allows the business owner to make quick and easy changes. Further information regarding users and orders can be accessed via the Admin Dashboard stored within the Django Admin Panel.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+Pallet Furniture Store seeks to build a strong base of regular shoppers who seek long-life, quality products made from high quality, natural materials. The newsletter, articles and carbon footprint features aim to attract those who have concerns for the rising environmental issues that our planet faces. Further marketing is made through the businesses social media channels, in particular their Facebook page which is accessible in the footer link.
 
-------
+# UX/UI - User Experience/User Interface
 
-## Release History
+## Design Inspiration
+From the beginning of the project, I knew that the colour palette would reflect the wooden pallet theme with shades of gold and yellow acting as the primary colour, in particular boostraps warning colour along with #E2AE3F and #b18600. The website is kept clean, with good flow, using plenty of white space to draw attention to the products and the website's mission in reducing the carbon footprints of its users.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+A simple wooden pallet is used as a favicon branding logo. The logo depicts a simple wooden box made from wooden planks.
 
-**June 18, 2024,** Add Mongo back into template
+Only the necessary information is displayed so as to not increase the size of the website and its own carbon footprint.  I created a home page background image, displaying a close up view of stacked pallets at our store, with some contrasting colouring to facilitate the purchase behind the website deliverables.
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+![Home Page Background Image](documentation/readme_images/pallets.jpg)
+*Image taken from Pexels images*
 
-**May 28 2024:** Fix Mongo and Links installs
+Feedback is continuously provided to the user via the website's header which displays whether the user is logged in and how many items are in their bag. Message 'toasts' are also visible upon user actions to display further information. Buttons are kept similar for continuity.
 
-**April 26 2024:** Update node version to 16
+![Header Feedback](documentation/readme_images/toast.PNG)  
+*Header feedback is kept clean and intuitive*
 
-**September 20 2023:** Update Python version to 3.9.17.
+### Color Scheme
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Variables were used within the CSS file to call colours as they were needed:
+- #b18600; Gold
+- #E2AE3F; Light gold
+- #000; Black
+- #555; Grey
+- orange; 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+The above colours were chosen to reflect colours found naturally within the theme of the homepage background image. 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+![Site Shop Now Button](documentation/readme_images/show-now-button.PNG)  
+*Pallet Furniture Store - Shop Now Button*
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+The hover effect uses a light and darker version of its colour when the mouse pointer is hovered over it by the user, which provides feedback that there is an action available in the feature/area.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+This colour theme was used throughout the site in keeping with the pallet theme, whilst using black text for clear visual contrast and readability.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+# Project Planning
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Strategy Plane
+The primary objective was to create an e-commerce store that satisfied the assessment criteria of the Code Institute's Project 5: E-Commerce Module. The store must provide the expected functions of a responsive e-commerce store using Stripe as a payment system, user/guest views for authentication and store features along with some extra features of my choosing, Bespoke requests and Service reviews, and FAQ's.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The site's design and graphic assets were collected through various copyright-free image websites. Images were edited for the website to be cohesive. The home page background image was taken from Pexels Images. Bootstrap and Crispy Forms were used for the project's frontend to speed up the process and to keep the templates consistent. Further customisation to the buttons, forms, modals, toasts and user feedback processes were added to the project's CSS files. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+If a customer chooses to make a purchase then they are given consistent feedback through the use of 'toasts' messages and confirmation emails. The purchasing process is presented using Stripe payment handlers, obtained and setup using [Stripe's](https://stripe.com/docs) documentation and website.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Site Goals
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- Site provides enjoyable experience for shoppers.
+- Customers are informed about the business purpose and our service provision via the About page and FAQ's Page.
+- UX remains similar across screen sizes.
+- CRUD functionalities work as intended with easy to use frontend forms.
+- Scalable site to allow for extra features in the future.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
