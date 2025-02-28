@@ -58,7 +58,6 @@ For full Admin access to Django Admin panel with relevant sign-in credentials: [
 - [Deployment](#deployment)
   - [Connecting to GitHub](#connecting-to-github)
   - [Django Project SetUp](#django-project-setup)
-    - [Elephant SQL](#elephant-sql)
   - [Heroku Deployment](#heroku-deployment)
   - [Google Mail Setup](#google-mail-setup)
   - [AWS Config](#aws-config)
@@ -425,7 +424,7 @@ A confirmation email for the order is emailed to all customers. This details the
 All registered user's will see an extra option in the navbar to Leave A Review where by they can sibmit their thoughts on the service provided to the Pallet Furniture Store.
 
 **Footer - All Users**
-Pallet Furniture Store's footer is brightly coloured with the default forest green colour to contrast against the site's important white space. Mail Chimp's newsletter subscription form for users to sign up for weekly emails lies at the centre below the interactive location map. Across from this are a list of links that aim to give the customer all of the information they would need about Pallet Furniture Store.
+Pallet Furniture Store's footer is brightly coloured with gold colour background to contrast against the site's important white space. Mail Chimp's newsletter subscription form for users to sign up for weekly emails lies at the centre below the interactive location map. Across from this are a list of links that aim to give the customer all of the information they would need about Pallet Furniture Store.
 
  A Facebook page for Pallet Furniture Store opens in a new tab using the facebook icon link, as does a Twitter page, Instagram, YouTube, Pintrest and LinkedIn.
 
@@ -436,3 +435,193 @@ At the bottom left are the Open Hours for the business and to the right of the m
     <img src="documentation/home_page/footer.PNG">  
 </details>
 
+
+## Future Features
+Some features which, upon completion of this project, I would like to add in time will include the following;
+
+- A section added to the about page or home page which could display a number of recently added positive reviews from customers who are registered with the Pallet Furntiure Store. 
+- A customer boostrap carousel which suggested items to display to a logged in user, based on collated data and insights based on their previous purchases with the store.
+- A mail campaign with special discounts and offers to registered customers on their birthdays, using their personal data, although this would require some extra data feeds collecting date's of brith's of registered customers.
+
+These are some features which create a real sense of community and belonging for customers and are regularly used as marketing techniques by larger, well known online shopping platforms.
+
+# Technologies & Languages Used
+
+- HTML
+- CSS
+- Bootstrap
+- JavaScript
+- JQuery
+- Python
+- [Git](https://git-scm.com/) used for version control.
+- [Github](https://www.github.com) used for online storage of codebase and Projects tool.
+- [CodeAnywhere](https://app.codeanywhere.com) as an online, cloud-based IDE for development.
+- [Figma](https://www.figma.com) for project design planning and wireframe creation.
+- [Adobe Color](https://color.adobe.com) for colour theme creation and accessibility checkers.
+- [Django](https://www.djangoproject.com/) was used as the Python framework for the site.
+- [Heroku](https://www.heroku.com) was used to host the 'everneed' application.
+
+## Libraries & Frameworks
+
+Libraries and frameworks used were dictated by the 'Boutique Ado' walkthrough from our course material with the Code Institute. This project will be upgraded on completion of the course to more recent packages to meet current standards and security packages.
+
+- [Django v3.2](https://docs.djangoproject.com/en/4.2/releases/3.2/) 
+- [AllAuth](https://django-allauth.readthedocs.io/) for user authentication and account management.
+- [Bootstrap v4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) for template rendering.
+- [Crispy Forms](https://pypi.org/project/crispy-bootstrap4/) for form rendering.
+- [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) for AWS CRUD with Python scripts.
+- [dj-database-url](https://pypi.org/project/dj-database-url/) for DATABASE_URL.
+- [django-countries](https://pypi.org/project/django-countries/) for country field rendering in checkout form.
+- [django-storages](https://django-storages.readthedocs.io/en/latest/) for handling static and media files.
+- [gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/) apure-Python WSGI server for UNIX.
+- [oauthlib](https://pypi.org/project/oauthlib/) OAuth request-signing logic.
+- [psycopg2](https://pypi.org/project/psycopg2/) s PostgreSQL database adapter for Python.
+- [Stripe](https://stripe.com/en-ie) for processing Everneed's payment system.
+
+## Tools & Programs
+- [ImageCompressor](https://imagecompressor.com/) for compressing PNG/WEbp files
+- [Convertio](https://convertio.co/) for file conversion to PNG, WEBP.
+- [Tiny Png](https://tinypng.com/) for file size reduction.
+- [Lucidchart](https://www.lucidchart.com/pages) for ERD (entity relationship diagram) creation.
+- [Favicon](https://favicon.io/) for converting an icon into a favicon.
+- [amiresponsive](https://ui.dev/amiresponsive) for screenshot of Everneed on different screen sizes.
+- [LeafletJS](https://leafletjs.com/index.html) for the interactive location map in the footer
+- [Mailchimp](https://mailchimp.com/) is used for marketing with their newsletter subscription service.
+
+
+# Testing
+
+- For all testing, please refer to the [TESTING.md](TESTING.md) file.
+
+# Deployment
+
+## Connecting to GitHub  
+
+To begin this project from scratch, you must first create a new GitHub repository using the [Code Institute's Template](https://github.com/Code-Institute-Org/ci-full-template). This template provides the relevant tools to get you started. To use this template:
+
+1. Log in to [GitHub](https://github.com/) or create a new account.
+2. Navigate to the above CI Full Template.
+3. Click '**Use this template**' -> '**Create a new repository**'.
+4. Choose a new repository name and click '**Create repository from template**'.
+5. In your new repository space, click the purple CodeAnywhere (if this is your IDE of choice) button to generate a new workspace.
+
+During the course of this project, I had to migrate my workspace from GitPod to a localised version of VS Code on my machine, from which I regularly commited any changes to my GitHub repository.
+
+## Django Project SetUp
+
+Install Django and supporting libraries:
+
+- ```pip3 install 'django<4' gunicorn```
+- ```pip3 install dj_database_url psycopg2``` 
+  
+1. Once you have installed any relevant dependencies or libraries, such as the ones listed above, it is important to create a **requirements.txt** file and add all installed libraries to it with the ```pip3 freeze --local > requirements.txt``` command in the terminal.  
+2. Create a new Django project in the terminal ```django-admin startproject everneed .```
+3. Create a new app eg. ```python3 mangage.py startapp home```
+5. Add this to list of **INSTALLED_APPS** in **settings.py** - 'home',
+6. Create a superuser for the project to allow Admin access and enter credentials: ```python3 manage.py createsuperuser```
+7. Migrate the changes with commands: ```python3 manage.py migrate```
+8. An **env.py** file must be created to store all protected data such as the **DATABASE_URL** and **SECRET_KEY**. These may be called upon in your project's **settings.py** file along with your Database configurations. The **env.py** file must be added to your **gitignore** file so that your important, protected information is not pushed to public viewing on GitHub. For adding to **env.py**:
+
+- ```import os```
+- ```os.environ["DATABASE_URL"]="<copiedURLfromElephantSQL>"```
+- ```os.environ["SECRET_KEY"]="my_super^secret@key"```
+  
+For adding to **settings.py**:
+
+- ```import os```
+- ```import dj_database_url```
+- ```if os.path.exists("env.py"):```
+- ```import env```
+- ```SECRET_KEY = os.environ.get('SECRET_KEY')``` (actual key hidden within env.py)  
+9. Replace **DATABASES** with:
+
+```
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+  }
+```
+10. Set up the templates directory in **settings.py**:
+
+- Under ``BASE_DIR`` enter ``TEMPLATES_DIR = os.path.join(BASE_DIR, ‘templates’)``
+- Update ``TEMPLATES = 'DIRS': [TEMPLATES_DIR]`` with:
+
+```
+os.path.join(BASE_DIR, 'templates'),
+os.path.join(BASE_DIR, 'templates', 'allauth')
+```
+
+- Create the media, static and templates directories in the top level of the project file in the IDE workspace.
+
+11. A **Procfile** must be created within the project repo for Heroku deployment with the following placed within it: ```web: gunicorn everneed.wsgi```
+12. Make the necessary migrations again.
+
+## Heroku Deployment
+
+To start the deployment process, please follow the below steps:
+
+1. Log in to [Heroku](https://id.heroku.com/login) or create an account if you are a new user.
+2. Once logged in, in the Heroku Dashboard, navigate to the '**New**' button in the top, right corner, and select '**Create New App**'.
+3. Enter an app name and choose your region. Click '**Create App**'.
+4. In the Deploy tab, click on the '**Settings**', reach the '**Config Vars**' section and click on '**Reveal Config Vars**'. Here you will enter KEY:VALUE pairs for the app to run successfully. The KEY:VALUE pairs that you will need are your:
+
+   - **DATABASE_URL**:**postgres://...**
+   - **DISABLE_COLLECTSTATIC** of value '1' (N.B Remove this Config Var before deployment),
+   - **SECRET_KEY** and value  
+   - **EMAIL_HOST_PASS** and value
+   - **EMAIL_HOST_USER** and value
+   - **STRIPE_PUBLIC_KEY** and value
+   - **STRIPE_SECRET_KEY** and value
+   - **STRIPE_WH_SECRET** and value
+   - **CLOUDINARY_URL** and value
+5. Add the Heroku host name into **ALLOWED_HOSTS** in your projects **settings.py file** -> ```['herokuappname', ‘localhost’, ‘8000 port url’].```
+2. Once you are sure that you have set up the required files including your requirements.txt and Procfile, you have ensured that **DEBUG=False**, save your project, add the files, commit for initial deployment and push the data to GitHub.
+3. Go to the '**Deploy**' tab and choose GitHub as the Deployment method.
+4. Search for the repository name, select the branch that you would like to build from, and connect it via the '**Connect**' button.
+5. Choose from '**Automatic**' or '**Manual**' deployment options, I chose the 'Manual' deployment method. Click '**Deploy Branch**'.
+6.  Once the waiting period for the app to build has finished, click the '**View**' link to bring you to your newly deployed site. If you receive any errors, Heroku will display a reason in the app build log for you to investigate. **DISABLE_COLLECTSTATIC**  may be removed from the Config Vars once you have saved and pushed an image within your project.
+
+## Google Mail Setup
+
+1. Setup a Gmail Account that will be used to hold and store the emails for your project.
+2. Logged in, navigate to **Settings** -> **Other Google Account Settings** -> **Accounts** -> **Import** -> **Other Account Settings**
+3. Activate 2-Step Verification
+4. Once verified access **App Passwords** -> **Other** -> enter a name for the password, eg Everneed.
+5. Click **Create** -> copy the 16 digit password that is generated.
+6. Add EMAIL_HOST_PASS, EMAIL_HOST_USER variable, password and email address to your Heroku Config Vars
+
+## Stripe Config
+
+Stripe's API is used to handle Everneed's payment system. To setup follow the below steps:
+
+1. Create and log in to a Stripe account.
+2. In the Stripe Dashboard -> **Get your test API keys.**
+3. Add your `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY` to your env.py, connect to your settings.py using your environment variables and then enter them into your project's Heroku Config Vars.
+4. Including Stripe's Webhooks creates a failsafe if a customer exits the page during payment authorisation. In Stripe's Dashboard -> **Developers** -> **Webhooks** -> **Add Endpoint**: 'herokuapp url/checkout/wh'
+5.  Choose **Retrieve all events** -> **Add Endpoint**.
+6.  Add new key **STRIPE_WH_SECRET** to env.py, settings.py and Heroku Config Vars as before.
+
+# Credits
+
+## Code
+
+The following blogs/tutorials complimented my learning for this project, alongside the [Code Institute's](https://codeinstitute.net/ie/) Learning Content. The Portfolio Project 5 - Boutique Ado provided a foundation which I took apart and altered to fit my project's design
+
+- [Django Docs](https://www.djangoproject.com/)
+- [Bootstrap Docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- [Code Institute's](https://github.com/Code-Institute-Org>) Blog/Boutique Ado walkthroughs
+- MailChimp subscription facility [MailChimp](https://mailchimp.com/)
+- LeafleJs Maps for footer [LeafletJS](https://leafletjs.com/reference.html)
+
+## Media
+
+- [Freepik](https://www.freepik.com) for images used within the site
+- [Pexels](https://www.pexels.com/) for images used within the site
+- [Chat GPT](https://www.chat.openai.com) was used to produce the content text.
+
+## Acknowledgements
+
+- A huge thanks to my family for their continued support during this project after many long nights and late evenings working towards the Diploma and the many cups of coffee sent my way. 
+- Much gratitude is extended to mentor's Amy and Lewis for their expert guidance and advice during this Diploma, which gave me the confidence to make the most out of every project.
+- I would like to pass on a special thank you to Tutor Support - especially three individuals, Rebecca , Roman and Oisin who were a huge help towards the final stages of this journey when tiredness crept in and I encountered a very specific issue with duplicate payments on Stripe. They all helped me only days before the end, to resolve this issue, with an eagle eye level of accuracy by Oisin at that 6.30pm clsoing time. So my graditute to them, under stressful circumstances cannot be thankful enough! Tutor Support are a serious level of help when you're in the depths of it.
+- Thank you to my fellow students and Code Institute alumni for their guidance and support.
+- From the time I began this course 12 months ago to this point in time , I can say that I feel that I have learned more from this course than I have done with any other previous third level course in Software Development.
