@@ -178,11 +178,11 @@ In addition to this, sitemap.xml and robots.txt files are included to increase t
 
 ### Visitor User Stories
 
-| User Story | Priority |
-|------------|------------------|
-| As a **customer**, I can **view the site's home page** so that I can **understand the site's intentions and purpose**. | **MUST HAVE** |
-| As a **customer**, I can **see and use the navigation bar** so that I can **make my way around the site and get to where I would like**. | **MUST HAVE** |
-| As a **customer**, I can **enter text into the search bar** so that I can **search for a specific item**. | **MUST HAVE** |
-
 I used the Useer Story Plan below to plan out the flow of development stages of the project.
-![User Story Plan](documentation/Tests/TestPlan.xlsx)
+- [User Story Plan](documentation/Tests/TestPlan.xlsx)
+
+These User Stories were followed using the Agile Development methodology within my project's Board.
+
+- [My Project Board](https://github.com/users/petermcloughlin/projects/9)
+
+
