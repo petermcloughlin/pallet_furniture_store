@@ -40,12 +40,7 @@ For full Admin access to Django Admin panel with relevant sign-in credentials: [
     - [MoSCoW Prioritization](#moscow-prioritization)
   - [Marketing](#marketing)
   - [User Stories](#user-stories)
-    - [Visitor User Stories](#visitor-user-stories)
-    - [Epic - Home View \& User Account](#epic---home-view--user-account)
-    - [Epic - Products](#epic---products)
-    - [Epic - Basket Management \& Purchasing](#epic---basket-management--purchasing)
-    - [Epic - Wishlist](#epic---wishlist)
-    - [Epic - Newsletter](#epic---newsletter)
+    - [Visitor User Stories](#visitor-user-stories)  
   - [Scope Plane](#scope-plane)
   - [Structural Plane](#structural-plane)
   - [Skeleton \& Surface Planes](#skeleton--surface-planes)
@@ -56,7 +51,6 @@ For full Admin access to Django Admin panel with relevant sign-in credentials: [
   - [User View - Guests/Account Holders](#user-view---guestsaccount-holders)
   - [CRUD Functionality](#crud-functionality)
   - [Features Showcase](#features-showcase)
-  - [Future Features](#future-features)
 - [Technologies \& Languages Used](#technologies--languages-used)
   - [Libraries \& Frameworks](#libraries--frameworks)
   - [Tools \& Programs](#tools--programs)
@@ -176,13 +170,269 @@ In addition to this, sitemap.xml and robots.txt files are included to increase t
 ![Pallet Furniture Store Facebook Business Page](documentation/readme_images/facebook-profile.PNG)
 *Pallet Furniture Store Facebook Business Page*
 
+## User Stories
+
 ### Visitor User Stories
 
 I used the Useer Story Plan below to plan out the flow of development stages of the project.
-- [User Story Plan](documentation/Tests/TestPlan.xlsx)
+[User Story Plan](documentation/Tests/TestPlan.xlsx)
 
-These User Stories were followed using the Agile Development methodology within my project's Board.
+These User Stories were followed using the Agile Development methodology within my project's Board, completing each user story , fulfilling each Epic goal.
 
-- [My Project Board](https://github.com/users/petermcloughlin/projects/9)
+[My Project Board](https://github.com/users/petermcloughlin/projects/9)
 
+## Scope Plane
+
+To focus on the learning of the Stripe API and webhook handlers that would ultimately drive the inner workings of the project, I kept my Pallet Furniture Store scope lower than my previous project, Bandon Dog Groomers. A working e-commerce store was essential so I initially planned to keep to the MVP to ensure that I would complete the project successfully.
+
+Aside from the CRUD fuctionality and online shopping component build, I added my own extra functionalities - Bespoke requets page, Frequently Asked Questions(FAQ) and a Service Review form( which is only available to registered users).
+
+Django's MVT framework allowed these features to be built quickly and addition of an Admin frontend panel for managing store products created a robust e-commerce site that could start taking orders.
+
+Essential features were:
+- User Accounts with AllAuth
+- Payment system with Stripe
+- Product inventory management - Full CRUD
+- Shopping UX with Bag and Checkout processes - Full CRUD
+- Site responsivity
+- Business details to inform the user
+
+## Structural Plane
+
+Pallet Furniture Store is built using Bootstrap, with Code Institute's Boutique Ado e-commerce project as its foundation. However, I picked apart the structure and styling to fit my own vision and changed quite a bit of the code.  The Pallet Furniture Store icon was used as the Favicon.
+
+Bootstrap allowed for easy transition between screen sizes as many ecommerce purchases are made using our mobiles, so this was a priority focus. Bootstrap components such as forms and an accordion section raised the spec of the project, to give it a professional finish.
+
+## Skeleton & Surface Planes
+
+### Wireframes
+
+[Figma](https://www.figma.com) was used to create basic wireframes for Everneed. I had a vision of what the site would look like from the beginning so the planning process went smoothly. Figma allows easy creation of wireframes to the appropriate frame sizes for different screens. Addition of icons and extra design features is easy with their Plugins component which can connect to Flaticon for example.
+
+<details open>
+    <summary>Desktop/Tablet Home Page Wireframe</summary>  
+    <img src="">  
+</details>
+
+<details>
+    <summary>Mobile Home Page Wireframe</summary>  
+    <img src="">  
+</details>
+
+### Database Schema
+
+![Pallet Furniture Store Ecommerce ERC](documentation/erd/ERD.PNG)  
+*Database Schema (ERD) for Pallet Furniture Store displaying relationships between feature components saved within the database*
+
+[Lucidchart](https://www.lucidchart.com/pages/) was used to create the ERD(Entity Relationship Diagram) for Pallet Furniture Store. To satisfy the assessment criteria, multiple models were created to personalise the project. These include:
+- **StoreProduct**: Store Products may be added by Admin with image and text fields within the Add/Edit Product forms.
+- **CustomerOrder**: Displays the customer's personal, billing and cost information, inclusive of delivery cost.
+- **BespokeRequest**: The Bespoke Request model takes simple values from the user to make bespoke requests for specific product requirements they might like for a new design.
+- **FAQ**: The Frequently Asked Questions page was added with the customer in mind. This was a very useful tool, added to give the customer some extra reassurance before making their purchase.
+- **ServiceReview**: This facility was added only for registered users who wish to leave a review of the service they receive from Pallet Furniture Store, to help with further developments of product creation, service and delivery.
+
+### Defensive Design
+
+Pallet Furniture Store was developed to ensure a reliable user experience. It's intention was to cause no frustrations for the users and to ensure they return to make further purchases.
+
+- Django AllAuth for user registration/log in/log out
+- Input validation and error messages provide feedback to the user to guide them towards the desired outcome. 
+- Unregistered users are diverted to the Sign Up page from restricted access pages. 
+- Authentication processes control edit/delete icons to reveal them to the Admin only, this is further secured through accessing of CRUD functionalities in the Admin Dashboard. 
+- Deletion of data is confirmed through an additional modal, double-checking with the user.
+- Error pages are displayed with 'Products' buttons to help users get back on track to the shopping experience. 
+- Testing and validation of features completes the process.
+
+**CSRF Tokens**
+
+CSRF (Cross-Site Request Forgery) tokens are included in every form to help authenticate the request with the server when the form is submitted. Absence of these tokens can leave a site vulnerable to attackers who may steal a user's data.
+
+# Features
+
+## User View - Guests/Account Holders
+
+| Feature   | Guest | Registered, Account Holder |
+|-----------|-------------------|-----------------|
+| Home Page | Visible           | Visible         |
+| Profile  | Not Visible - 'Profile' option only appears for registered, logged-in users | Visible and full feature interaction available |
+| All Products  | Visible - items can be viewed and added to Bag, Wishlist function not available | Visible and full feature interaction available |
+| Service Review   | Not Visible | Visible and full feature interaction available |
+| Read   | Visible | Visible |
+| Subcribe to Us (MailChimp) | Visible | Visible |
+| Admin Dashboard | Not Visible | Only visible to Admin |
+
+## CRUD Functionality
+
+Customers have full CRUD functionality with their prospective purchases. They may edit their bag, add more items or remove all items. They may also edit their delivery details if they are registered, logged-in users. Everneed Admin have access to the Admin Dashboard which allow them full CRUD over Product Management and Article posting.
+
+| Feature | Create | Read | Update | Delete |
+|---------|--------|------|--------|--------|
+| Profile | On registration | Yes, delivery details and order history | Yes, update address | No, users are unable to delete their accounts, this is restricted to Admin |
+| Bag | Yes, customers may add to their bag | Yes | Yes, items can be added/removed | Yes |
+| Products | Yes, Admin only | Yes, all users | Yes, Admin only | Yes, Admin only |
+| Articles | Yes, Admin only | Yes, all users | Yes, Admin only | Yes, Admin only |
+
+## Features Showcase
+
+**Header & Navigation - All Users**
+Pallet Furniture Store's navbar is kept clean, with a simple dropdown menu for the 'All Products' section. 
+- The Split dropdown options for both Home and Garden, keep the navigation categorised for searching
+- The Account dropdown displays options for Profile for registered, logged in users and with a Leave a Review option in the navbar.
+- The bag displays the number of items within it if the customer adds an item to it.
+
+The collapsible navbar compacts these options into a neat burgar icon.
+
+**Home Page - All Users**
+
+The Pallet Fruniture Store Home Page invites the user in with a large background image, tajen from Pexels.com. An 'Shop Now' button brings the user straight to the 'All Products' page. 
+Below this is the Mission section with a smooth scroll animation fade-in and underline when the user moves down the flow of the page. Here the customer can identify the business's core values.
+
+A simple accordion section for business FAQ's follows this, answering a broad spectrum of possible customer questions.
+
+<details open>
+    <summary>Home Page Navbar - All Users</summary>  
+    <img src="documentation/home_page/nav.PNG">  
+</details>
+
+<details>
+    <summary>Home Page Background and Shop Now - All Users</summary>  
+    <img src="documentation/home_page/home.PNG">  
+</details>
+
+<details>
+    <summary>Home Page Footer - All Users</summary>  
+    <img src="documentation/home_page/footer.PNG">  
+</details>
+
+<details>
+    <summary>FAQ's- All Users</summary>  
+    <img src="documentation/home_page/faq.PNG">  
+</details>
+
+**All Auth - All Users who wish to create an account**
+
+Django AllAuth provides a comprehensive, customisable authentication system that keeps user data safe. If a customer wishes to register an account they may enter their username and email and password x 2 to ensure precision. Upon submitting the form the user will receive an email to validate their email and then sign in to Pallet Furniture Store. Similar to all form fields throughout the site, I have applied bootstrap styling to keep in line with Pallet Furniture Store's design. The log in page is similar to the register page with the log out page presenting the user with two buttons to continue the log out process or to return home.
+
+Feedback is continually released to the user through toast messages to confirm successful registration, log in and log out.
+
+AllAuth handles password reset by sending an email to the user with a link to change their password to something new.
+<details open>
+    <summary>Register - All Users</summary>  
+    <img src="documentation/readme_images/sign-up.PNG">  
+</details>
+
+<details>
+    <summary>Login - All Users</summary>  
+    <img src="documentation/readme_images/login.PNG">  
+</details>
+
+<details>
+    <summary>Log Out - All Users</summary>  
+    <img src="documentation/readme_images/logout.PNG">  
+</details>
+
+**Account - Registered, logged in User**
+
+The Account page for Pallet Furniture Store is kept simple, with only relevant information and functionality. The registered, logged in user may adjust their personal, delivery address to be autofilled into their checkout form when making a purchase. Previous purchases are displayed in the Order History, displayed by most recent date.
+
+<details open>
+    <summary>Account Toast - Registered, logged-in Users</summary>  
+    <img src="documentation/Tests/confirm-login.PNG">  
+</details>
+
+<details>
+    <summary>Account View - Registered, logged-in Users</summary>  
+    <img src="documentation/readme_images/profile.PNG">  
+</details>
+
+**All Products - All Users**
+
+Pallet Furniture Store sells a hand-made list of furniture products for both home and garden, built using refurbished used and un-used pallets.
+
+The product list and product details pages are kept responsive and neat thanks to Bootstrap's grid system to collapse the rows into single columns. Products may be sorted according to price ascending, price descending and category using the dropdowns under All Products, Home and Garden.
+
+Admin may access the Admin Dashboard to add/edit/delete any items within the database. Crispy Forms renders the adding/editing forms.No information is lost when viewing the website on mobile view. All screen sizes display the same information to give all users the same experience.
+
+<details open>
+    <summary>All Products Desktop - All Users</summary>  
+    <img src="documentation/readme_images/all-products-desktop-user.PNG">  
+</details>
+
+<details>
+    <summary>All Products Mobile - All Users</summary>  
+    <img src="documentation/readme_images/all-products-mobile-user.PNG">  
+</details>
+
+<details>
+    <summary>Product Detail Desktop - All Users</summary>  
+    <img src="documentation/readme_images/product-details-desktop-user.PNG">  
+</details>
+
+<details>
+    <summary>Product Detail Mobile - All Users</summary>  
+    <img src="documentation/readme_images/product-details-mobile-user.PNG">  
+</details>
+
+<details>
+    <summary>Admin Product List - Logged-In, Admin only</summary>  
+    <img src="documentation/readme_images/all-products-desktop-admin.PNG">  
+</details>
+<details>
+    <summary>Admin Product Details Mobile - Logged-In, Admin only</summary>  
+    <img src="documentation/readme_images/all-products-mobile-admin.PNG">  
+</details>
+
+
+**Categories - All Users**
+
+Pallet Futniture Store keeps it's shopping experience clean and easily accessible with six categories:
+- Tables & Chairs
+- Benches & Racks
+- Stands
+- Beds
+- Coffee Tables
+- Other
+
+All split in Garden and Home under the navbar dropdowns.
+
+
+**Bag - All Users**
+
+Pallet Furniture Store's Shopping Bag feature is presented in a clean and clear format to correctly and quickly inform the user of their possible purchase choices. The customer has the option to change the amounts of the items that they wish to buy or to remove them completely from the bag. The customer is shown their running totals as well as their delivery charge and their carbon saved and carbon footprint total. When products are added/updated/removed to/from the bag, then a toast message displays to give the customer feedback on their most recent choice.
+
+A clear message is shown if there are no items in the bag and a 'Keep Shopping' button redirects the user back to the 'All Products' page. A standard delivery of €10 is applied to all shopping bags which is reflected in the grand total price.
+
+**Checkout - All Users**
+
+The checkout process for Pallet Furniture Store is operated through the [Stripe](https://stripe.com/docs) API. As stated above -> If you wish to make a test purchase, you can use the following [Stripe Dummy Card](https://stripe.com/docs/testing) details:
+
+- Success Card Number: 4242 4242 4242 4242
+- Exp Date: 04/25
+- CVN: 242
+- Postcode: 42424 
+
+Any payments made using a valid debit/credit card will not process and the card will not be charged. No orders made will be fulfilled.
+
+When the customer has added items that they wish to purchase to their bag, they are given the option to proceed to 'Secure Checkout' to complete their order. This checkout form contains a personal, delivery/billing information form that will display previously entered details if the user is logged in and had previously ticked the box to save their details. The Stripe Payment form accepts the user's information and will inform them if they attempt to use an invalid card. Validation is also present in the delivery form area, to remind the user if they have not entered all of the relevant details.
+
+The items the customer has chosen are visible on the right hand side of the webpage with their grand total for their order.
+
+Once the Checkout form has been submitted, a loading spinner informs the user that their payment is processing. Stripe's webhook handlers make this process smooth as the payment may attempt 9 times before being unsuccessful overall. In the Developer's view in the Stripe Dashboard, developers can check the webhook and payment processes to confirm they are working correctly.
+
+A confirmation email for the order is emailed to all customers. This details their spending amount and the date of their purchase. Their totals and items purchased are also visible in the checkout success page upon successful payment processing. If the user is logged in, they can view this order and all previous orders, if they were logged in at the time of purchase, in their profile view.
+
+**Service Review - Registered, logged in Users only**
+All registered user's will see an extra option in the navbar to Leave A Review where by they can sibmit their thoughts on the service provided to the Pallet Furniture Store.
+
+**Footer - All Users**
+Pallet Furniture Store's footer is brightly coloured with the default forest green colour to contrast against the site's important white space. Mail Chimp's newsletter subscription form for users to sign up for weekly emails lies at the centre below the interactive location map. Across from this are a list of links that aim to give the customer all of the information they would need about Pallet Furniture Store.
+
+ A Facebook page for Pallet Furniture Store opens in a new tab using the facebook icon link, as does a Twitter page, Instagram, YouTube, Pintrest and LinkedIn.
+
+At the bottom left are the Open Hours for the business and to the right of the map is the location address and contact details.
+
+<details open>
+    <summary>Footer - All Users</summary>  
+    <img src="documentation/home_page/footer.PNG">  
+</details>
 
