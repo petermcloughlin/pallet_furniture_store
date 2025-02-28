@@ -38,7 +38,6 @@ For full Admin access to Django Admin panel with relevant sign-in credentials: [
     - [Site Goals](#site-goals)
   - [Agile Methodologies](#agile-methodologies)
     - [MoSCoW Prioritization](#moscow-prioritization)
-    - [Sprints](#sprints)
   - [Marketing](#marketing)
   - [User Stories](#user-stories)
     - [Visitor User Stories](#visitor-user-stories)
@@ -153,3 +152,37 @@ If a customer chooses to make a purchase then they are given consistent feedback
 - CRUD functionalities work as intended with easy to use frontend forms.
 - Scalable site to allow for extra features in the future.
 
+## Agile Methodologies
+
+The Pallet Furniture Store followed Agile planning methodologies to its completion. [GitHub Projects](https://github.com/users/petermcloughlin/projects/9) provided an ideal platform to create issues, boards and milestones for each of the project's Epics. Keeping focused on individual sections as I built the Pallet Furniture Store reduced the number of bugs and human errors.
+
+### MoSCoW Prioritization
+
+I chose to follow the MoSCoW Prioritization method for the Pallet Furniture Store, identifying and labeling my:
+
+- **Must Haves**: the 'required', critical components of the project. Completing my 'Must Haves' helped me to reach the MVP (Minimum Viable Product) for this project.
+- **Should Haves**: the components that are valuable to the project but not absolutely 'vital' at the MVP stage. The 'Must Haves' must receive priority over the 'Should Haves'.
+- **Could Haves**: these are the features that are a 'bonus' to the project, it would be nice to have them in this phase, but only if the most important issues have been completed first and time allows.
+- **Won't Haves**: the features or components that either no longer fit the project's brief or are of very low priority for this release.
+
+## Marketing
+
+An [Pallet Furniture Store Facebook Page](https://www.facebook.com/profile.php?id=61573319522718) was created to demonstrate promotion of the Pallet Furniture Store on social media. Posts informing customers of deals and new products would be made on the page with the hopes of drawing in more revenue. Facebook provides an easy, minimal-step process to allow business owners to promote their business, with additional paid 'boost' features to further promote and spread the reach of the posts. Pallet Furniture Store also offers a newsletter subscription service through MailChimp. The benefit of both of these services is that the customer is not forced to sign up to either and potentially worry that they will be spammed with an unnecessary amount of information. Pallet Furniture Store avoids this in order to keep its brand clean and uphold its eco-friendly efforts.
+
+Within the head's meta tags of the base template are researched keywords and a description of Pallet Furniture Store's goal as a business. These keywords have been researched using[Wordtracker](https://www.wordtracker.com/) to ensure that both short-tail and long-tail keywords are included.
+
+In addition to this, sitemap.xml and robots.txt files are included to increase the site's visibility. These files are essential for SEO (Search Engine Optimisation). The sitemap.xml was generated using [XML Sitemap](https://www.xml-sitemaps.com/) and included in the root folder of the project. A robots.txt file was created in the root folder to instruct search engine crawlers on how to access and crawl the site's pages.
+
+![Pallet Furniture Store Facebook Business Page](documentation/readme_images/facebook-profile.PNG)
+*Pallet Furniture Store Facebook Business Page*
+
+### Visitor User Stories
+
+| User Story | Priority |
+|------------|------------------|
+| As a **customer**, I can **view the site's home page** so that I can **understand the site's intentions and purpose**. | **MUST HAVE** |
+| As a **customer**, I can **see and use the navigation bar** so that I can **make my way around the site and get to where I would like**. | **MUST HAVE** |
+| As a **customer**, I can **enter text into the search bar** so that I can **search for a specific item**. | **MUST HAVE** |
+
+I used the Useer Story Plan below to plan out the flow of development stages of the project.
+![User Story Plan](documentation/Tests/TestPlan.xlsx)
