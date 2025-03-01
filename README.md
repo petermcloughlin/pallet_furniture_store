@@ -60,9 +60,6 @@ For full Admin access to Django Admin panel with relevant sign-in credentials: [
   - [Django Project SetUp](#django-project-setup)
   - [Heroku Deployment](#heroku-deployment)
   - [Google Mail Setup](#google-mail-setup)
-  - [AWS Config](#aws-config)
-    - [Media Folder Setup](#media-folder-setup)
-    - [Django AWS Connect](#django-aws-connect)
   - [Stripe Config](#stripe-config)
 - [Credits](#credits)
   - [Code](#code)
@@ -283,14 +280,13 @@ CSRF (Cross-Site Request Forgery) tokens are included in every form to help auth
 
 ## CRUD Functionality
 
-Customers have full CRUD functionality with their prospective purchases. They may edit their bag, add more items or remove all items. They may also edit their delivery details if they are registered, logged-in users. Everneed Admin have access to the Admin Dashboard which allow them full CRUD over Product Management and Article posting.
+Customers have full CRUD functionality with their prospective purchases. They may edit their bag, add more items or remove all items. They may also edit their delivery details if they are registered, logged-in users. Pallet Furniture Store Admin have access to the Admin Dashboard which allow them full CRUD over Product Management and Article posting.
 
 | Feature | Create | Read | Update | Delete |
 |---------|--------|------|--------|--------|
 | Profile | On registration | Yes, delivery details and order history | Yes, update address | No, users are unable to delete their accounts, this is restricted to Admin |
 | Bag | Yes, customers may add to their bag | Yes | Yes, items can be added/removed | Yes |
 | Products | Yes, Admin only | Yes, all users | Yes, Admin only | Yes, Admin only |
-| Articles | Yes, Admin only | Yes, all users | Yes, Admin only | Yes, Admin only |
 
 ## Features Showcase
 
@@ -472,7 +468,7 @@ These are some features which create a real sense of community and belonging for
 - [Balsamiq](https://balsamiq.cloud/) for project design planning and wireframe creation.
 - [Adobe Color](https://color.adobe.com) for colour theme creation and accessibility checkers.
 - [Django](https://www.djangoproject.com/) was used as the Python framework for the site.
-- [Heroku](https://www.heroku.com) was used to host the 'everneed' application.
+- [Heroku](https://www.heroku.com) was used to host the application.
 
 ## Libraries & Frameworks
 
@@ -488,7 +484,7 @@ Libraries and frameworks used were dictated by the 'Boutique Ado' walkthrough fr
 - [gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/) apure-Python WSGI server for UNIX.
 - [oauthlib](https://pypi.org/project/oauthlib/) OAuth request-signing logic.
 - [psycopg2](https://pypi.org/project/psycopg2/) s PostgreSQL database adapter for Python.
-- [Stripe](https://stripe.com/en-ie) for processing Everneed's payment system.
+- [Stripe](https://stripe.com/en-ie) for processing Pallet Furniture Store's payment system.
 
 ## Tools & Programs
 - [ImageCompressor](https://imagecompressor.com/) for compressing PNG/WEbp files
@@ -496,7 +492,7 @@ Libraries and frameworks used were dictated by the 'Boutique Ado' walkthrough fr
 - [Tiny Png](https://tinypng.com/) for file size reduction.
 - [Lucidchart](https://www.lucidchart.com/pages) for ERD (entity relationship diagram) creation.
 - [Favicon](https://favicon.io/) for converting an icon into a favicon.
-- [amiresponsive](https://ui.dev/amiresponsive) for screenshot of Everneed on different screen sizes.
+- [amiresponsive](https://ui.dev/amiresponsive) for screenshot of Pallet Furniture Store on different screen sizes.
 - [LeafletJS](https://leafletjs.com/index.html) for the interactive location map in the footer
 - [Mailchimp](https://mailchimp.com/) is used for marketing with their newsletter subscription service.
 
@@ -899,7 +895,7 @@ Install Django and supporting libraries:
 - ```pip3 install dj_database_url psycopg2``` 
   
 1. Once you have installed any relevant dependencies or libraries, such as the ones listed above, it is important to create a **requirements.txt** file and add all installed libraries to it with the ```pip3 freeze --local > requirements.txt``` command in the terminal.  
-2. Create a new Django project in the terminal ```django-admin startproject everneed .```
+2. Create a new Django project in the terminal ```django-admin startproject pallet_furniture_store .```
 3. Create a new app eg. ```python3 mangage.py startapp home```
 5. Add this to list of **INSTALLED_APPS** in **settings.py** - 'home',
 6. Create a superuser for the project to allow Admin access and enter credentials: ```python3 manage.py createsuperuser```
@@ -936,7 +932,7 @@ os.path.join(BASE_DIR, 'templates', 'allauth')
 
 - Create the media, static and templates directories in the top level of the project file in the IDE workspace.
 
-11. A **Procfile** must be created within the project repo for Heroku deployment with the following placed within it: ```web: gunicorn everneed.wsgi```
+11. A **Procfile** must be created within the project repo for Heroku deployment with the following placed within it: ```web: gunicorn pallet_furniture_store.wsgi```
 12. Make the necessary migrations again.
 
 ## Heroku Deployment
@@ -969,13 +965,13 @@ To start the deployment process, please follow the below steps:
 1. Setup a Gmail Account that will be used to hold and store the emails for your project.
 2. Logged in, navigate to **Settings** -> **Other Google Account Settings** -> **Accounts** -> **Import** -> **Other Account Settings**
 3. Activate 2-Step Verification
-4. Once verified access **App Passwords** -> **Other** -> enter a name for the password, eg Everneed.
+4. Once verified access **App Passwords** -> **Other** -> enter a name for the password.
 5. Click **Create** -> copy the 16 digit password that is generated.
 6. Add EMAIL_HOST_PASS, EMAIL_HOST_USER variable, password and email address to your Heroku Config Vars
 
 ## Stripe Config
 
-Stripe's API is used to handle Everneed's payment system. To setup follow the below steps:
+Stripe's API is used to handle Pallet Furniture Store's payment system. To setup follow the below steps:
 
 1. Create and log in to a Stripe account.
 2. In the Stripe Dashboard -> **Get your test API keys.**
