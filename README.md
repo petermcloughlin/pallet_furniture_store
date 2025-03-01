@@ -254,10 +254,10 @@ CSRF (Cross-Site Request Forgery) tokens are included in every form to help auth
 |-----------|-------------------|-----------------|
 | Home Page | Visible           | Visible         |
 | Profile  | Not Visible - 'Profile' option only appears for registered, logged-in users | Visible and full feature interaction available |
-| All Products  | Visible - items can be viewed and added to Bag, Wishlist function not available | Visible and full feature interaction available |
+| All Products  | Visible - items can be viewed and added to Bag | Visible and full feature interaction available |
 | Service Review   | Not Visible | Visible and full feature interaction available |
 | Read   | Visible | Visible |
-| Subcribe to Us (MailChimp) | Visible | Visible |
+| Subscribe to Us (MailChimp) | Visible | Visible |
 | Admin Dashboard | Not Visible | Only visible to Admin |
 
 ## CRUD Functionality
