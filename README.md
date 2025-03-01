@@ -5,7 +5,7 @@
 ## Introduction
 Welcome to the Pallet Furniture Store,
 
-This is an online furniture store which builds, assembles and sells bespoke, han-dmade furntiure from refurbished, used and un-used pallets. This is a business set up with both the customer and the environment in mind. At the Pallet Furniture Store, our dedicated team have partnered up with a number of building contractors and small businesses, nationwide to ensure a policy of reduced waste and increased recycling continues, whilst supporting our team members as they provide a continuous range of bespoke fuurniture pieces, for both home and gardens, all made from refurbished, used and unused pallets.
+This is an online furniture store which builds, assembles and sells bespoke, hand-made furntiure from refurbished, used and un-used pallets. This is a business set up with both the customer and the environment in mind. At the Pallet Furniture Store, our dedicated team have partnered up with a number of building contractors and small businesses, nationwide to ensure a policy of reduced waste and increased recycling continues, whilst supporting our team members as they provide a continuous range of bespoke fuurniture pieces, for both home and gardens, all made from refurbished, used and unused pallets.
 
 You can access the deployed site [here](https://django-pallet-furniture-a8821c2711e7.herokuapp.com/)
 
@@ -79,7 +79,7 @@ Pallet Furniture Store is an eco-friendly furniture store focusing on procuring 
 - View, add and edit products in their bag
 - As registered users, view past orders through their profile page
 - Submit reviews letting us know their thoughts about our service
-- Suscribe to our mailing list using mailchimp's facility in the site's footer
+- Subscribe to our mailing list using mailchimp's facility in the site's footer
 
 Pallet Furniture Store is accessible via all browsers with full responsiveness on different screen sizes. Its aim is to provide eye-catching , bespoke home and garden furnishings, whilst reducing waste nationally.
 
@@ -96,7 +96,7 @@ Pallet Furniture Store seeks to build a strong base of regular shoppers who seek
 # UX/UI - User Experience/User Interface
 
 ## Design Inspiration
-From the beginning of the project, I knew that the colour palette would reflect the wooden pallet theme with shades of gold and yellow acting as the primary colour, in particular boostraps warning colour along with #E2AE3F and #b18600. The website is kept clean, with good flow, using plenty of white space to draw attention to the products and the website's mission in reducing the carbon footprints of its users.
+From the beginning of the project, I knew that the colour palette would reflect the wooden pallet theme with shades of gold and yellow acting as the primary colour, in particular bootstrap's warning colour along with #E2AE3F and #b18600. The website is kept clean, with good flow, using plenty of white space to draw attention to the products and the website's mission in reducing the carbon footprints of its users.
 
 A simple wooden pallet is used as a favicon branding logo. The logo depicts a simple wooden box made from wooden planks.
 
@@ -151,16 +151,11 @@ The Pallet Furniture Store followed Agile planning methodologies to its completi
 
 ### MoSCoW Prioritization
 
-I chose to follow the MoSCoW Prioritization method for the Pallet Furniture Store, identifying and labeling my:
-
-- **Must Haves**: the 'required', critical components of the project. Completing my 'Must Haves' helped me to reach the MVP (Minimum Viable Product) for this project.
-- **Should Haves**: the components that are valuable to the project but not absolutely 'vital' at the MVP stage. The 'Must Haves' must receive priority over the 'Should Haves'.
-- **Could Haves**: these are the features that are a 'bonus' to the project, it would be nice to have them in this phase, but only if the most important issues have been completed first and time allows.
-- **Won't Haves**: the features or components that either no longer fit the project's brief or are of very low priority for this release.
+I chose to follow the MoSCoW Prioritization method for the Pallet Furniture Store when planning out the necessary requirements with the customer in mindand used this prioritization method when planning out the user stories and epics.
 
 ## Marketing
 
-An [Pallet Furniture Store Facebook Page](https://www.facebook.com/profile.php?id=61573319522718) was created to demonstrate promotion of the Pallet Furniture Store on social media. Posts informing customers of deals and new products would be made on the page with the hopes of drawing in more revenue. Facebook provides an easy, minimal-step process to allow business owners to promote their business, with additional paid 'boost' features to further promote and spread the reach of the posts. Pallet Furniture Store also offers a newsletter subscription service through MailChimp. The benefit of both of these services is that the customer is not forced to sign up to either and potentially worry that they will be spammed with an unnecessary amount of information. Pallet Furniture Store avoids this in order to keep its brand clean and uphold its eco-friendly efforts.
+A [Pallet Furniture Store Facebook Page](https://www.facebook.com/profile.php?id=61573319522718) was created to demonstrate promotion of the Pallet Furniture Store on social media. Posts informing customers of deals and new products would be made on the page with the hopes of drawing in more revenue. Facebook provides an easy, minimal-step process to allow business owners to promote their business, with additional paid 'boost' features to further promote and spread the reach of the posts. Pallet Furniture Store also offers a newsletter subscription service through MailChimp. The benefit of both of these services is that the customer is not forced to sign up to either and potentially worry that they will be spammed with an unnecessary amount of information. Pallet Furniture Store avoids this in order to keep its brand clean and uphold its eco-friendly efforts.
 
 Within the head's meta tags of the base template are researched keywords and a description of Pallet Furniture Store's goal as a business. These keywords have been researched using[Wordtracker](https://www.wordtracker.com/) to ensure that both short-tail and long-tail keywords are included.
 
@@ -206,17 +201,44 @@ Bootstrap allowed for easy transition between screen sizes as many ecommerce pur
 
 ### Wireframes
 
-[Figma](https://www.figma.com) was used to create basic wireframes for Everneed. I had a vision of what the site would look like from the beginning so the planning process went smoothly. Figma allows easy creation of wireframes to the appropriate frame sizes for different screens. Addition of icons and extra design features is easy with their Plugins component which can connect to Flaticon for example.
-
+[Balsamiq](https://balsamiq.cloud/) was used to create basic wireframes for the Pallet Furniture Store. I had a vision of what the site would look like from the beginning so the planning process went smoothly. Balsamiq allows easy creation of wireframes to the appropriate frame sizes for different screens. See below some initial mock-ups I created to keep me focused on my vision of how the site would look on larger devices. 
 <details open>
-    <summary>Desktop/Tablet Home Page Wireframe</summary>  
-    <img src="">  
+    <summary>Home Page</summary>  
+    <img src="documentation/wire-frames/home-page.PNG">  
+</details>
+<details>
+    <summary>About Page</summary>  
+    <img src="documentation/wire-frames/about-page.PNG">  
+</details>
+<details>
+    <summary>Products Page</summary>  
+    <img src="documentation/wire-frames/products-page.PNG">  
+</details>
+<details>
+    <summary>Products Details Page</summary>  
+    <img src="documentation/wire-frames/product-details.PNG">  
+</details>
+<details>
+    <summary>Products Management</summary>  
+    <img src="documentation/wire-frames/product-management.PNG">  
+</details>
+<details>
+    <summary>Bespoke Requests Page</summary>  
+    <img src="documentation/wire-frames/bespoke-request.PNG">  
+</details>
+<details>
+    <summary>Service Review Page</summary>  
+    <img src="documentation/wire-frames/service-review.PNG">  
+</details>
+<details>
+    <summary>Shopping Bag Page</summary>  
+    <img src="documentation/wire-frames/bag.PNG">  
+</details>
+<details>
+    <summary>Profile Page</summary>  
+    <img src="documentation/wire-frames/profile-page.PNG">  
 </details>
 
-<details>
-    <summary>Mobile Home Page Wireframe</summary>  
-    <img src="">  
-</details>
 
 ### Database Schema
 
@@ -256,7 +278,6 @@ CSRF (Cross-Site Request Forgery) tokens are included in every form to help auth
 | Profile  | Not Visible - 'Profile' option only appears for registered, logged-in users | Visible and full feature interaction available |
 | All Products  | Visible - items can be viewed and added to Bag | Visible and full feature interaction available |
 | Service Review   | Not Visible | Visible and full feature interaction available |
-| Read   | Visible | Visible |
 | Subscribe to Us (MailChimp) | Visible | Visible |
 | Admin Dashboard | Not Visible | Only visible to Admin |
 
@@ -279,14 +300,11 @@ Pallet Furniture Store's navbar is kept clean, with a simple dropdown menu for t
 - The Account dropdown displays options for Profile for registered, logged in users and with a Leave a Review option in the navbar.
 - The bag displays the number of items within it if the customer adds an item to it.
 
-The collapsible navbar compacts these options into a neat burgar icon.
+The collapsible navbar compacts these options into a neat burgar icon on mobile and tablet devices.
 
 **Home Page - All Users**
 
-The Pallet Fruniture Store Home Page invites the user in with a large background image, tajen from Pexels.com. An 'Shop Now' button brings the user straight to the 'All Products' page. 
-Below this is the Mission section with a smooth scroll animation fade-in and underline when the user moves down the flow of the page. Here the customer can identify the business's core values.
-
-A simple accordion section for business FAQ's follows this, answering a broad spectrum of possible customer questions.
+The Pallet Fruniture Store Home Page invites the user in with a large background image, taken from Pexels.com. A 'Shop Now' button brings the user straight to the 'All Products' page.
 
 <details open>
     <summary>Home Page Navbar - All Users</summary>  
@@ -301,11 +319,6 @@ A simple accordion section for business FAQ's follows this, answering a broad sp
 <details>
     <summary>Home Page Footer - All Users</summary>  
     <img src="documentation/home_page/footer.PNG">  
-</details>
-
-<details>
-    <summary>FAQ's- All Users</summary>  
-    <img src="documentation/home_page/faq.PNG">  
 </details>
 
 **All Auth - All Users who wish to create an account**
@@ -397,7 +410,7 @@ All split in Garden and Home under the navbar dropdowns.
 
 **Bag - All Users**
 
-Pallet Furniture Store's Shopping Bag feature is presented in a clean and clear format to correctly and quickly inform the user of their possible purchase choices. The customer has the option to change the amounts of the items that they wish to buy or to remove them completely from the bag. The customer is shown their running totals as well as their delivery charge and their carbon saved and carbon footprint total. When products are added/updated/removed to/from the bag, then a toast message displays to give the customer feedback on their most recent choice.
+Pallet Furniture Store's Shopping Bag feature is presented in a clean and clear format to correctly and quickly inform the user of their possible purchase choices. The customer has the option to change the amounts of the items that they wish to buy or to remove them completely from the bag. When products are added/updated/removed to/from the bag, then a toast message displays to give the customer feedback on their most recent choice.
 
 A clear message is shown if there are no items in the bag and a 'Keep Shopping' button redirects the user back to the 'All Products' page. A standard delivery of €10 is applied to all shopping bags which is reflected in the grand total price.
 
@@ -455,8 +468,8 @@ These are some features which create a real sense of community and belonging for
 - Python
 - [Git](https://git-scm.com/) used for version control.
 - [Github](https://www.github.com) used for online storage of codebase and Projects tool.
-- [CodeAnywhere](https://app.codeanywhere.com) as an online, cloud-based IDE for development.
-- [Figma](https://www.figma.com) for project design planning and wireframe creation.
+- Visual Studio Code
+- [Balsamiq](https://balsamiq.cloud/) for project design planning and wireframe creation.
 - [Adobe Color](https://color.adobe.com) for colour theme creation and accessibility checkers.
 - [Django](https://www.djangoproject.com/) was used as the Python framework for the site.
 - [Heroku](https://www.heroku.com) was used to host the 'everneed' application.
@@ -469,7 +482,6 @@ Libraries and frameworks used were dictated by the 'Boutique Ado' walkthrough fr
 - [AllAuth](https://django-allauth.readthedocs.io/) for user authentication and account management.
 - [Bootstrap v4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) for template rendering.
 - [Crispy Forms](https://pypi.org/project/crispy-bootstrap4/) for form rendering.
-- [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) for AWS CRUD with Python scripts.
 - [dj-database-url](https://pypi.org/project/dj-database-url/) for DATABASE_URL.
 - [django-countries](https://pypi.org/project/django-countries/) for country field rendering in checkout form.
 - [django-storages](https://django-storages.readthedocs.io/en/latest/) for handling static and media files.
@@ -731,6 +743,128 @@ I created a Test Plan, in line with the objectiives set out in each user story w
 
 ### Test Plan Results
 [TestPlan](documentation/Tests/TestPlan.xlsx)
+
+You can see below a visual of each result:
+#### Products
+<details open>
+    <summary>Products List</summary>  
+    <img src="documentation/Tests/products-list.PNG">  
+</details>
+<details open>
+    <summary>Products Sort Ascending</summary>  
+    <img src="documentation/Tests/products-sort-asc.PNG">  
+</details>
+<details open>
+    <summary>Products Sort Descending</summary>  
+    <img src="documentation/Tests/products-sort-desc.PNG">  
+</details>
+<details>
+    <summary>Products Category</summary>  
+    <img src="documentation/Tests/products-category1.PNG">  
+</details>
+<details>
+    <summary>Products Category</summary>  
+    <img src="documentation/Tests/products-category2.PNG">  
+</details>
+<details>
+    <summary>Product Details</summary>  
+    <img src="documentation/Tests/product-details.PNG">  
+</details>
+
+#### Shopping Bag and Checkout
+<details open>
+    <summary>Add To Bag</summary>  
+    <img src="documentation/Tests/add-to-bag.PNG">  
+</details>
+<details>
+    <summary>Amend Bag Quantity</summary>  
+    <img src="documentation/Tests/amend-bag-quantity.PNG">  
+</details>
+<details>
+    <summary>Bag Items</summary>  
+    <img src="documentation/Tests/bag-items.PNG">  
+</details>
+<details>
+    <summary>Checkout Success</summary>  
+    <img src="documentation/Tests/checkout-success-page-corrected.PNG">  
+</details>
+
+#### Bespoke Request
+<details open>
+    <summary>Bespoke Request</summary>  
+    <img src="documentation/Tests/bespoke-request-confirmation.PNG">  
+</details>
+
+#### FAQ's
+<details open>
+    <summary>FAQ's</summary>  
+    <img src="documentation/Tests/faq.PNG">  
+</details>
+
+#### Login and Logout
+<details open>
+    <summary>Login</summary>  
+    <img src="documentation/Tests/confirm-login.PNG">  
+</details>
+<details>
+    <summary>Logout</summary>  
+    <img src="documentation/Tests/confirmed-logout.PNG">  
+</details>
+
+#### Registration and Password Reset
+<details open>
+    <summary>Registration</summary>  
+    <img src="documentation/Tests//confirmed-registration.PNG">  
+</details>
+<details>
+    <summary>Confirm registration email</summary>  
+    <img src="documentation/Tests/confirm-registration-email.PNG">  
+</details>
+<details>
+    <summary>Password Reset</summary>  
+    <img src="documentation/Tests/password-reset-confirm.PNG">  
+</details>
+<details>
+    <summary>Password Reset Confirmed</summary>  
+    <img src="documentation/Tests/password-reset-confirmation.PNG">  
+</details>
+<details>
+    <summary>Password Reset Email</summary>  
+    <img src="documentation/Tests/password-reset-email-link.PNG">  
+</details>
+
+#### Confirmed Order
+<details open>
+    <summary>Confirmed Order</summary>  
+    <img src="documentation/Tests//email-confirm-order-corrected.PNG">  
+</details>
+
+#### Invalid Card Number
+<details open>
+    <summary>Invalid Card Number</summary>  
+    <img src="documentation/Tests/invalid-card-number.PNG">  
+</details>
+
+#### Mail Chimp
+<details open>
+    <summary>Mail Chimp Form</summary>  
+    <img src="documentation/Tests/mail-chimp-form.PNG">  
+</details>
+<details>
+    <summary>Mail Chimp Confirm Subscription</summary>  
+    <img src="documentation/Tests/mailchimp-confirm-sub.PNG">  
+</details>
+<details open>
+    <summary>Mail Chimp Already Subscribed</summary>  
+    <img src="documentation/Tests/mailchimp-already-sub.PNG">  
+</details>
+
+#### Service Review
+<details open>
+    <summary>Service Review Confirmation</summary>  
+    <img src="documentation/Tests/service-review-confirmation.PNG">  
+</details>
+
 
 ### Responsiveness
 Upone completion of the project, I used the [am-i-responsive](https://ui.dev/amiresponsive) online tool to generate a multi device view of the site's home page.
