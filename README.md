@@ -491,7 +491,257 @@ Libraries and frameworks used were dictated by the 'Boutique Ado' walkthrough fr
 
 # Testing
 
-- For all testing, please refer to the [TESTING.md](TESTING.md) file.
+- [Testing](#testing)  
+  - [Validation](#validation)
+    - [HTML Validation](#html-validation)
+    - [Python Validation](#python-validation)
+    - [CSS Validation](#css-validation)
+    - [Lighthouse Scores](#lighthouse-scores)
+  - [Manual Testing](#manual-testing)
+    - [Responsiveness](#responsiveness)
+    - [Test Plan Results](#test-plan-results)
+
+
+## HTML Validation
+
+For my HTML files I have used [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
+
+I have had to follow a different approach for validating my HTML for this project as the majority of my pages are developed using Jinja syntax such as '{% extends "base.html" %}' and '{{ form|crispy }}' and most require user authentication. The HTML validator will throw errors if I were to use my website's URL so I have had to follow the below approach for every page:
+
+- Via the deployed Heroku app link, I have navigated to each individual page.
+- Right clicking on the screen/CTRL+U/⌘+U on Mac, allows a menu to appear, giving me the option to 'View page source'.
+- The complete HTML code for the deployed page will appear, allowing you to select the entire code using CTRL+A/⌘+A on Mac.
+- Paste the copied code into the [validate by input](https://validator.w3.org/#validate_by_input) option.
+- Check for errors and warnings, fix any issues, revalidate by following the above steps and record the results.
+
+
+All HTML pages were validated and received a 'No errors or warning to show' for code that I had written, result as shown above.
+
+| HTML Source Code/Page | Errors | Warnings |
+| ---- | ------ | -------- |
+| Home | 0 | 0 |
+| Log In | 0 | 0 |
+| Register | 0 | 0 |
+| Account | 0 | 0 |
+| Bespoke Request | 0 | 0 |
+| FAQ | 0 | 0 |
+| Admin Dashboard | 0 | 0 |
+| Admin Product List | 0 | 0 |
+| Admin Product Detail | 0 | 0 |
+| Admin Add Product | ID error -> Errors/Warnings present as a result of Bootstraps form elements, not from the code that I have created. The name ID from the contact form html within the base.html is clashing with the name ID from the add product html. These ID elements are embedded within the Bootstrap forms and are inaccessible to me without breaking my code up and reconfiguring the code. I will reinvestigate and break into the code when my Diploma has been awarded to remove errors like these. [html validation duplicate id bootstrap forms](documentation/validations/html/HTML_Errors/add_product.PNG) | As before |
+| Admin Edit Product | 1 - same as Admin Add Product | 0 |
+| Admin Delete Product | 0 | 0 |
+| All Products | 0 | 0 |
+| User Product List | 0 | 0 |
+| User Product Details | 0 | 0 |
+| Bag - Products | 1 - same as Admin Add Product | 0 |
+| Checkout | 0 | 1 |
+| Profile | 0 | 0 |
+| Forgot Password | 0 | 0 |
+| Error 404 | 0 | 0 |
+| Error 500 | 0  | 0 |
+
+## Python Validation
+
+[CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files that were created or edited by myself. No issues presented and line lengths were double checked. I have included some screenshots with the results below. 
+#### Products
+<details>
+    <summary>Products - Forms.py</summary>  
+    <img src="documentation/validations/products/forms.PNG">  
+</details>
+<details>
+    <summary>Products - models.py</summary>  
+    <img src="documentation/validations/products/models.PNG">  
+</details>
+<details>
+    <summary>Products - urls.py</summary>  
+    <img src="documentation/validations/products/urls.PNGG">  
+</details>
+<details>
+    <summary>Products - views.py</summary>  
+    <img src="documentation/validations/products/views.PNG">  
+</details>
+<details>
+    <summary>Products - widgets.py</summary>  
+    <img src="documentation/validations/products/widgets.PNG">  
+</details>
+
+#### Profile
+<details>
+    <summary>Profile - forms.py</summary>  
+    <img src="documentation/validations/profiles/forms.PNG">  
+</details>
+<details>
+    <summary>Profile - models.py</summary>  
+    <img src="documentation/validations/profiles/models.PNG">  
+</details>
+<details>
+    <summary>Profile - urls.py</summary>  
+    <img src="documentation/validations/profiles/urls.PNG">  
+</details>
+<details>
+    <summary>Profile - views.py</summary>  
+    <img src="documentation/validations/profiles/views.PNG">  
+</details>
+
+#### Service Reviews
+<details>
+    <summary>Service Review - models.py</summary>  
+    <img src="documentation/validations/service-review/models.PNG">  
+</details>
+<details>
+    <summary>Service Review - views.py</summary>  
+    <img src="documentation/validations/service-review/views.PNG">  
+</details>
+
+#### Bag
+<details>
+    <summary>Bag - contexts.py</summary>  
+    <img src="documentation/validations/bag/contexts.PNG">  
+</details>
+<details>
+    <summary>Bag - urls.py</summary>  
+    <img src="documentation/validations/bag/urls.PNG">  
+</details>
+<details>
+    <summary>Bag - views.py</summary>  
+    <img src="documentation/validations/bag/views.PNG">  
+</details>
+
+#### Bespoke Requests
+<details>
+    <summary>Bespoke Requests - models.py</summary>  
+    <img src="documentation/validations/bespokerequests/models.PNG">  
+</details>
+<details>
+    <summary>Bespoke Requests - forms.py</summary>  
+    <img src="documentation/validations/bespokerequests/forms.PNG">  
+</details>
+<details>
+    <summary>Bespoke Requests - urls.py</summary>  
+    <img src="documentation/validations/bespokerequests/urls.PNG">  
+</details>
+<details>
+    <summary>Bespoke Requests - views.py</summary>  
+    <img src="documentation/validations/bespokerequests/views.PNG">  
+</details>
+
+#### Checkout
+<details>
+    <summary>Checkout - models.py</summary>  
+    <img src="documentation/validations/checkout/models.PNG">  
+</details>
+<details>
+    <summary>Checkout - signals.py</summary>  
+    <img src="documentation/validations/checkout/signals.PNG">  
+</details>
+<details>
+    <summary>Checkout - forms.py</summary>  
+    <img src="documentation/validations/checkout/forms.PNG">  
+</details>
+<details>
+    <summary>Checkout - urls.py</summary>  
+    <img src="documentation/validations/checkout/urls.PNG">  
+</details>
+<details>
+    <summary>Checkout - views.py</summary>  
+    <img src="documentation/validations/checkout/views.PNG">  
+</details>
+<details>
+    <summary>Checkout - webhook_handler.py</summary>  
+    <img src="documentation/validations/checkout/webhook_handler.PNG">  
+</details>
+<details>
+    <summary>Checkout - webhooks.py</summary>  
+    <img src="documentation/validations/checkout/webhooks.PNG">  
+</details>
+
+## CSS Validation
+
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS files. External CSS for Bootstrap, provided by [CDN](https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css) was not tested.
+
+To keep my document concise I have not included every screenshot of the CSS validations, as they are all the same, but the results are as follows.
+
+| CSS File | Errors | Warnings |
+| ---- | ------ | -------- |
+| Checkout | 0 | 0 |
+| Profiles | 0 | 0 |
+| Base CSS | 0 | 0 |
+
+### Lighthouse Scores
+
+Lighthouse testing was carried out in Incognito mode to achieve the best result. Images used in the site's design were saved in png format, and compressed using [tinypng](https://tinypng.com/) and [Convertio](https://www.convertio.co) to offer the best chance for a decent performance score.
+
+Results can be seen below;
+<details>
+    <summary>Home</summary>  
+    <img src="documentation/validations/lighthouse/desktop/HomePage.PNG">  
+</details>
+<details>
+    <summary>About</summary>  
+    <img src="documentation/validations/lighthouse/desktop/About.PNG">  
+</details>
+<details>
+    <summary>Bespoke Requests</summary>  
+    <img src="documentation/validations/lighthouse/desktop/bespokerequest.PNG">  
+</details>
+<details>
+    <summary>FAQ</summary>  
+    <img src="documentation/validations/lighthouse/desktop/faq.PNG">  
+</details>
+<details>
+    <summary>Service Review</summary>  
+    <img src="documentation/validations/lighthouse/desktop/service-review.PNG">  
+</details>
+<details>
+    <summary>Products</summary>  
+    <img src="documentation/validations/lighthouse/desktop/Products.PNG">  
+</details>
+<details>
+    <summary>Product Details</summary>  
+    <img src="documentation/validations/lighthouse/desktop/ProductDetails.PNG">  
+</details>
+<details>
+    <summary>Profile</summary>  
+    <img src="documentation/validations/lighthouse/desktop/profile.PNG">  
+</details>
+<details>
+    <summary>Bag</summary>  
+    <img src="documentation/validations/lighthouse/desktop/bag.PNG">  
+</details>
+<details>
+    <summary>Checkout</summary>  
+    <img src="documentation/validations/lighthouse/desktop/checkout.PNG">  
+</details>
+<details>
+    <summary>Checkout-Success</summary>  
+    <img src="documentation/validations/lighthouse/desktop/checkout-success.PNG">  
+</details>
+
+## Manual Testing
+For this project I used manual testing of the various components made up within the site.
+This testing process included the following;
+- Code validation
+- Site Repsonsiveness Checks
+- Functional Testing in line with user story goals and epics
+
+Throughout the build of this project which was built using the Agile methodology of Software Develpoment Lifecycle, each compnent or function was manually tested to ensure the particular user story goal was achieved, before moving on to the next step.
+
+I created a Test Plan, in line with the objectiives set out in each user story within each epic.
+
+### Test Plan Results
+[TestPlan](documentation/Tests/TestPlan.xlsx)
+
+### Responsiveness
+Upone completion of the project, I used the [am-i-responsive](https://ui.dev/amiresponsive) online tool to generate a multi device view of the site's home page.
+
+<details>
+    <summary>Pallet-Furniture-Store</summary>  
+    <img src="documentation/validations/am-i-responsive/am-i-responsive.PNG">  
+</details>
+
+Using the Bootstrap framework allowed a more rapid development of a responsive website. Starting with mobile first, Pallet Furniture Store was created to ensure the customer has an unhindered, positive experience when shopping. Pallet Furniture Store was regularly tested during development using Dev Tools to check for display issues on iPhone, Samsung Galaxy devices, iPad/iPad Pro and laptop/desktop screen sizes. Once deployed to Heroku, Pallet Furniture Store was tested on real world devices. No major issues were detected, changes were made to the checkout view to remove the product image on smaller screens and only display important product information. There were no major differences between desktop and tablet views thanks to the Bootstrap Grid system of columns.
+
 
 # Deployment
 
@@ -610,7 +860,7 @@ The following blogs/tutorials complimented my learning for this project, alongsi
 - [Bootstrap Docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 - [Code Institute's](https://github.com/Code-Institute-Org>) Blog/Boutique Ado walkthroughs
 - MailChimp subscription facility [MailChimp](https://mailchimp.com/)
-- LeafleJs Maps for footer [LeafletJS](https://leafletjs.com/reference.html)
+- LeafletJs Maps for footer [LeafletJS](https://leafletjs.com/reference.html)
 
 ## Media
 
