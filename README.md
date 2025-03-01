@@ -88,16 +88,16 @@ Customers are provided with an easy, intuitive shopping experience and are encou
 
 Pallet Furniture Store provides easy Admin functionality for the business owner with an accessible, easy-use Admin Dashboard to manage the product details and information in our store. The additional frontend forms allows the business owner to make quick and easy changes. Further information regarding users and orders can be accessed via the Admin Dashboard stored within the Django Admin Panel.
 
-Pallet Furniture Store seeks to build a strong base of regular shoppers who seek long-life, quality products made from high quality, natural materials. The newsletter, articles and carbon footprint features aim to attract those who have concerns for the rising environmental issues that our planet faces. Further marketing is made through the businesses social media channels, in particular their Facebook page which is accessible in the footer link.
+Pallet Furniture Store seeks to build a strong base of regular shoppers who seek long-life, quality products made from high quality, natural materials. Further marketing is made through the businesses social media channels, in particular their Facebook page which is accessible in the footer link.
 
 # UX/UI - User Experience/User Interface
 
 ## Design Inspiration
-From the beginning of the project, I knew that the colour palette would reflect the wooden pallet theme with shades of gold and yellow acting as the primary colour, in particular bootstrap's warning colour along with #E2AE3F and #b18600. The website is kept clean, with good flow, using plenty of white space to draw attention to the products and the website's mission in reducing the carbon footprints of its users.
+From the beginning of the project, I knew that the colour palette would reflect the wooden pallet theme with shades of gold and yellow acting as the primary colour, in particular bootstrap's warning colour along with #E2AE3F and #b18600. The website is kept clean, with good flow, using plenty of white space to draw attention to the products.
 
 A simple wooden pallet is used as a favicon branding logo. The logo depicts a simple wooden box made from wooden planks.
 
-Only the necessary information is displayed so as to not increase the size of the website and its own carbon footprint.  I created a home page background image, displaying a close up view of stacked pallets at our store, with some contrasting colouring to facilitate the purchase behind the website deliverables.
+Only the necessary information is displayed so as to not increase the size of the website.  I created a home page background image, displaying a close up view of stacked pallets at our store.
 
 ![Home Page Background Image](documentation/readme_images/pallets.jpg)
 *Image taken from Pexels images*
